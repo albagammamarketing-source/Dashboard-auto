@@ -2,7 +2,7 @@ name: Run Python Script
 
 on:
   schedule:
-    - cron: "0 1 * * *"  # ogni notte all 1:00
+    - cron: "0 1 * * *"  # ogni notte all'1:00
   workflow_dispatch:  # avvio manuale
 
 jobs:
@@ -10,14 +10,18 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-    - name: Set up Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: "3.10"
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
 
-    - name: Run script
-      run: |
-       python 60_ripetute_camuffate.py
+      - name: Install dependencies
+        run: |
+          pip install pandas
+
+      - name: Run script
+        run: |
+          python 60_ripetute_camuffate.py

@@ -20,4 +20,4 @@ jobs:
 
     - name: Run script
       run: |
-        python script.py
+       python 60_ripetute_camuffate.py

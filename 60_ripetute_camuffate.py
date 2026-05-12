@@ -1,28 +1,25 @@
 import sys
+import os
 import pandas as pd
 import logging
 import smtplib
 from itertools import combinations
+from functools import reduce
 from email.message import EmailMessage
 from sqlalchemy import create_engine
 from sqlalchemy.exc import ProgrammingError, OperationalError
 
-# --- Configurazioni generali ---
-FETCH_WINDOW_MINUTES = 10000
+FETCH_WINDOW_MINUTES = 5000
 
 DATA_INIZIO = None
 DATA_FINE = None
-
-# Se vuoi usare FETCH_WINDOW_MINUTES:
-# DATA_INIZIO = None o "2026-04-30 23:59:59"
-# DATA_FINE = None
 
 SUM_THRESHOLD = 1
 OCCURRENCE_THRESHOLD = 2
 OCCULT_THRESHOLDS = [4, 5, 6]
 QUOTA_EXTRA_THRESHOLD = 108
 
-SIMILARITY_MINIMA_UTENTE = 50.0
+SIMILARITY_MINIMA_UTENTE = 80.0
 CSV_SEPARATOR = ";"
 CSV_DECIMAL = ","
 
@@ -34,26 +31,64 @@ SCOMMESSE_FOCUS = [
     26446, 26450, 26454, 26465, 26466, 26468
 ]
 
-EMAIL_SENDER = "albagamma.marketing@gmail.com"
-EMAIL_PASSWORD = "jjel rwtf jmxb cute"
+# =====================================================
+# CONFIGURAZIONE SICURA PER GITHUB ACTIONS / SECRETS
+# =====================================================
+# Questi valori NON devono stare nel codice.
+# Vanno inseriti in GitHub:
+# Settings -> Secrets and variables -> Actions -> New repository secret
+
+EMAIL_SENDER = os.getenv("EMAIL_SENDER")
+EMAIL_PASSWORD = os.getenv("EMAIL_PASSWORD")
+EMAIL_RECEIVERS = [
+    email.strip()
+    for email in os.getenv("EMAIL_RECEIVERS", "").split(",")
+    if email.strip()
+]
+
 EMAIL_SMTP_SERVER = "smtp.gmail.com"
 EMAIL_SMTP_PORT = 587
-EMAIL_RECEIVERS = ["dario.guarriello@gmail.com"]
+
+DB_USER = os.getenv("DB_USER")
+DB_PASSWORD = os.getenv("DB_PASSWORD")
+DB_HOST = os.getenv("DB_HOST")
+DB_PORT = os.getenv("DB_PORT", "3306")
+
+REQUIRED_ENV_VARS = {
+    "EMAIL_SENDER": EMAIL_SENDER,
+    "EMAIL_PASSWORD": EMAIL_PASSWORD,
+    "EMAIL_RECEIVERS": EMAIL_RECEIVERS,
+    "DB_USER": DB_USER,
+    "DB_PASSWORD": DB_PASSWORD,
+    "DB_HOST": DB_HOST,
+    "DB_PORT": DB_PORT,
+}
+
+missing_vars = [name for name, value in REQUIRED_ENV_VARS.items() if not value]
+if missing_vars:
+    raise ValueError(
+        "Variabili ambiente mancanti. Crea questi GitHub Secrets: "
+        + ", ".join(missing_vars)
+    )
+
+try:
+    DB_PORT = int(DB_PORT)
+except ValueError as exc:
+    raise ValueError("DB_PORT deve essere un numero, ad esempio 3306") from exc
 
 DB_CONFIGS = {
-    "360BET": {"user": "dbalba11", "password": "Albagamma2024$", "host": "194.163.157.255", "port": 3306, "database": "AnalisiTickets_360BET"},
-    "ADMIRAL": {"user": "dbalba11", "password": "Albagamma2024$", "host": "194.163.157.255", "port": 3306, "database": "AnalisiTickets_ADMIRAL"},
-    "BBET": {"user": "dbalba11", "password": "Albagamma2024$", "host": "194.163.157.255", "port": 3306, "database": "AnalisiTickets_BBET"},
-    "DOMUSBET": {"user": "dbalba11", "password": "Albagamma2024$", "host": "194.163.157.255", "port": 3306, "database": "AnalisiTickets_DOMUSBET"},
-    "MARATHON": {"user": "dbalba11", "password": "Albagamma2024$", "host": "194.163.157.255", "port": 3306, "database": "AnalisiTickets_MARATHON"},
-    "SKYWIND": {"user": "dbalba11", "password": "Albagamma2024$", "host": "194.163.157.255", "port": 3306, "database": "AnalisiTickets_SKYWIND"},
-    "SPORTBET": {"user": "dbalba11", "password": "Albagamma2024$", "host": "194.163.157.255", "port": 3306, "database": "AnalisiTickets_SPORTBET"},
-    "STANLEYBET": {"user": "dbalba11", "password": "Albagamma2024$", "host": "194.163.157.255", "port": 3306, "database": "AnalisiTickets_STANLEYBET"},
-    "STARCASINO": {"user": "dbalba11", "password": "Albagamma2024$", "host": "194.163.157.255", "port": 3306, "database": "AnalisiTickets_STARCASINO"},
-    "TOTOSI": {"user": "dbalba11", "password": "Albagamma2024$", "host": "194.163.157.255", "port": 3306, "database": "AnalisiTickets_TOTOSI"},
-    "VINCITU": {"user": "dbalba11", "password": "Albagamma2024$", "host": "194.163.157.255", "port": 3306, "database": "AnalisiTickets_VINCITU"},
-    "WILLIAMHILL": {"user": "dbalba11", "password": "Albagamma2024$", "host": "194.163.157.255", "port": 3306, "database": "AnalisiTickets_WILLIAMHILL"},
-    "IGT": {"user": "dbalba11", "password": "Albagamma2024$", "host": "194.163.157.255", "port": 3306, "database": "AnalisiTickets_IGT"},
+    "360BET": {"user": DB_USER, "password": DB_PASSWORD, "host": DB_HOST, "port": DB_PORT, "database": "AnalisiTickets_360BET"},
+    "ADMIRAL": {"user": DB_USER, "password": DB_PASSWORD, "host": DB_HOST, "port": DB_PORT, "database": "AnalisiTickets_ADMIRAL"},
+    "BBET": {"user": DB_USER, "password": DB_PASSWORD, "host": DB_HOST, "port": DB_PORT, "database": "AnalisiTickets_BBET"},
+    "DOMUSBET": {"user": DB_USER, "password": DB_PASSWORD, "host": DB_HOST, "port": DB_PORT, "database": "AnalisiTickets_DOMUSBET"},
+    "MARATHON": {"user": DB_USER, "password": DB_PASSWORD, "host": DB_HOST, "port": DB_PORT, "database": "AnalisiTickets_MARATHON"},
+    "SKYWIND": {"user": DB_USER, "password": DB_PASSWORD, "host": DB_HOST, "port": DB_PORT, "database": "AnalisiTickets_SKYWIND"},
+    "SPORTBET": {"user": DB_USER, "password": DB_PASSWORD, "host": DB_HOST, "port": DB_PORT, "database": "AnalisiTickets_SPORTBET"},
+    "STANLEYBET": {"user": DB_USER, "password": DB_PASSWORD, "host": DB_HOST, "port": DB_PORT, "database": "AnalisiTickets_STANLEYBET"},
+    "STARCASINO": {"user": DB_USER, "password": DB_PASSWORD, "host": DB_HOST, "port": DB_PORT, "database": "AnalisiTickets_STARCASINO"},
+    "TOTOSI": {"user": DB_USER, "password": DB_PASSWORD, "host": DB_HOST, "port": DB_PORT, "database": "AnalisiTickets_TOTOSI"},
+    "VINCITU": {"user": DB_USER, "password": DB_PASSWORD, "host": DB_HOST, "port": DB_PORT, "database": "AnalisiTickets_VINCITU"},
+    "WILLIAMHILL": {"user": DB_USER, "password": DB_PASSWORD, "host": DB_HOST, "port": DB_PORT, "database": "AnalisiTickets_WILLIAMHILL"},
 }
 
 BASE_FILTER_WINDOW = """
@@ -115,18 +150,11 @@ def build_filter(alias: str) -> str:
     )
 
     if usa_intervallo_date:
-        logging.info(
-            f"Filtro attivo su {alias}.data_ora_vend da {DATA_INIZIO} a {DATA_FINE}"
-        )
         return BASE_FILTER_DATE.format(
             alias=alias,
             data_inizio=DATA_INIZIO,
             data_fine=DATA_FINE
         )
-
-    logging.info(
-        f"Filtro attivo su {alias}.ut_ins: ultimi {FETCH_WINDOW_MINUTES} minuti"
-    )
 
     return BASE_FILTER_WINDOW.format(
         alias=alias,
@@ -186,11 +214,7 @@ def add_tuple_key(df: pd.DataFrame) -> pd.DataFrame:
         )
         df[col] = df[col].replace("", "n/a")
 
-    df["tuple"] = df[TUPLE_FIELDS].apply(
-        lambda row: "|".join(row),
-        axis=1
-    )
-
+    df["tuple"] = df[TUPLE_FIELDS].apply(lambda row: "|".join(row), axis=1)
     df["scommessa"] = pd.to_numeric(df["scommessa"], errors="coerce")
     df["quota"] = pd.to_numeric(df["quota"], errors="coerce")
 
@@ -290,6 +314,81 @@ def genera_ripetute_occulte(tickets_agg: pd.DataFrame, threshold: int) -> pd.Dat
     return pd.DataFrame(results)
 
 
+def conta_occulte_per_cf(df_occulte: pd.DataFrame, soglia: int) -> pd.DataFrame:
+    if df_occulte.empty:
+        return pd.DataFrame(columns=[
+            "concessionario",
+            "cf",
+            f"num_occulte_{soglia}"
+        ])
+
+    cf_1 = df_occulte[["concessionario_1", "cf_1"]].rename(
+        columns={"concessionario_1": "concessionario", "cf_1": "cf"}
+    )
+
+    cf_2 = df_occulte[["concessionario_2", "cf_2"]].rename(
+        columns={"concessionario_2": "concessionario", "cf_2": "cf"}
+    )
+
+    combined = pd.concat([cf_1, cf_2], ignore_index=True)
+
+    return (
+        combined
+        .groupby(["concessionario", "cf"])
+        .size()
+        .reset_index(name=f"num_occulte_{soglia}")
+    )
+
+
+def crea_indice_occulte(lista_df_occulte: list[pd.DataFrame]) -> pd.DataFrame:
+    if not lista_df_occulte:
+        return pd.DataFrame()
+
+    df_occulte = reduce(
+        lambda left, right: pd.merge(
+            left,
+            right,
+            on=["concessionario", "cf"],
+            how="outer"
+        ),
+        lista_df_occulte
+    ).fillna(0)
+
+    for soglia in OCCULT_THRESHOLDS:
+        col = f"num_occulte_{soglia}"
+        if col not in df_occulte.columns:
+            df_occulte[col] = 0
+        df_occulte[col] = df_occulte[col].astype(int)
+
+    df_occulte["indice_occulte"] = (
+        df_occulte["num_occulte_4"] * 1 +
+        df_occulte["num_occulte_5"] * 2 +
+        df_occulte["num_occulte_6"] * 3
+    )
+
+    df_occulte["indice_occulte_100"] = (
+        df_occulte["indice_occulte"] * 10
+    ).clip(upper=100)
+
+    def assegna_classe(valore):
+        if valore == 0:
+            return "Nessuna"
+        elif valore <= 30:
+            return "Bassa"
+        elif valore <= 60:
+            return "Media"
+        elif valore <= 80:
+            return "Alta"
+        else:
+            return "Molto Alta"
+
+    df_occulte["classe_occulte"] = df_occulte["indice_occulte_100"].apply(
+        assegna_classe
+    )
+
+    return df_occulte
+
+
 def crea_mappa_eventi_full(full_agg: pd.DataFrame) -> dict:
     full_map = {}
 
@@ -386,6 +485,74 @@ def genera_ticket_similari(
     return pd.DataFrame(results)
 
 
+def genera_indice_quota_extra(
+    df_similari: pd.DataFrame,
+    tickets_full_agg: pd.DataFrame
+) -> pd.DataFrame:
+    tot_ticket = (
+        tickets_full_agg
+        .groupby(["concessionario", "cf"])
+        .agg(tot_ticket_utente=("id_ticket", "nunique"))
+        .reset_index()
+    )
+
+    if df_similari.empty:
+        tot_ticket["num_ticket_quota_extra"] = 0
+        tot_ticket["perc_ticket_quota_extra"] = 0.0
+        return tot_ticket
+
+    lato_1 = df_similari[[
+        "concessionario_1",
+        "cf_1",
+        "id_ticket_1"
+    ]].rename(columns={
+        "concessionario_1": "concessionario",
+        "cf_1": "cf",
+        "id_ticket_1": "id_ticket"
+    })
+
+    lato_2 = df_similari[[
+        "concessionario_2",
+        "cf_2",
+        "id_ticket_2"
+    ]].rename(columns={
+        "concessionario_2": "concessionario",
+        "cf_2": "cf",
+        "id_ticket_2": "id_ticket"
+    })
+
+    coinvolti = (
+        pd.concat([lato_1, lato_2], ignore_index=True)
+        .drop_duplicates()
+    )
+
+    quota_extra = (
+        coinvolti
+        .groupby(["concessionario", "cf"])
+        .agg(num_ticket_quota_extra=("id_ticket", "nunique"))
+        .reset_index()
+    )
+
+    result = tot_ticket.merge(
+        quota_extra,
+        on=["concessionario", "cf"],
+        how="left"
+    )
+
+    result["num_ticket_quota_extra"] = (
+        result["num_ticket_quota_extra"]
+        .fillna(0)
+        .astype(int)
+    )
+
+    result["perc_ticket_quota_extra"] = (
+        result["num_ticket_quota_extra"] /
+        result["tot_ticket_utente"] * 100
+    ).round(2)
+
+    return result
+
+
 def genera_similarity_clustering_utente(
     tickets_full_agg: pd.DataFrame,
     similarity_minima: float = 50.0
@@ -458,35 +625,110 @@ def genera_similarity_clustering_utente(
     return pd.DataFrame(results)
 
 
-def genera_indice_similarity_utenti(df_similarity: pd.DataFrame) -> pd.DataFrame:
+def genera_indice_similarity_utenti(
+    df_similarity: pd.DataFrame,
+    df_indice_occulte: pd.DataFrame,
+    df_indice_quota_extra: pd.DataFrame
+) -> pd.DataFrame:
     if df_similarity.empty:
-        return pd.DataFrame()
+        base = pd.DataFrame(columns=[
+            "concessionario",
+            "cf",
+            "indice_similarity",
+            "peso_quota_medio",
+            "num_confronti",
+            "media_eventi_comuni"
+        ])
+    else:
+        base = (
+            df_similarity.groupby(["concessionario", "cf"])
+            .agg({
+                "similarity_percent": "mean",
+                "peso_quota": "mean",
+                "id_ticket_1": "count",
+                "eventi_comuni": "mean"
+            })
+            .reset_index()
+        )
 
-    result = (
-        df_similarity.groupby(["concessionario", "cf"])
-        .agg({
-            "similarity_percent": "mean",
-            "peso_quota": "mean",
-            "id_ticket_1": "count",
-            "eventi_comuni": "mean"
+        base = base.rename(columns={
+            "similarity_percent": "indice_similarity",
+            "peso_quota": "peso_quota_medio",
+            "id_ticket_1": "num_confronti",
+            "eventi_comuni": "media_eventi_comuni"
         })
-        .reset_index()
-    )
 
-    result = result.rename(columns={
-        "similarity_percent": "indice_similarity",
-        "peso_quota": "peso_quota_medio",
-        "id_ticket_1": "num_confronti",
-        "eventi_comuni": "media_eventi_comuni"
-    })
+        base["indice_similarity"] = base["indice_similarity"].round(2)
+        base["peso_quota_medio"] = base["peso_quota_medio"].round(2)
+        base["media_eventi_comuni"] = base["media_eventi_comuni"].round(2)
 
-    result["indice_similarity"] = result["indice_similarity"].round(2)
-    result["peso_quota_medio"] = result["peso_quota_medio"].round(2)
-    result["media_eventi_comuni"] = result["media_eventi_comuni"].round(2)
+    result = base.copy()
+
+    if df_indice_occulte is not None and not df_indice_occulte.empty:
+        result = result.merge(
+            df_indice_occulte,
+            on=["concessionario", "cf"],
+            how="outer"
+        )
+
+    if df_indice_quota_extra is not None and not df_indice_quota_extra.empty:
+        result = result.merge(
+            df_indice_quota_extra,
+            on=["concessionario", "cf"],
+            how="outer"
+        )
+
+    for col in ["num_occulte_4", "num_occulte_5", "num_occulte_6"]:
+        if col not in result.columns:
+            result[col] = 0
+        result[col] = result[col].fillna(0).astype(int)
+
+    if "indice_occulte" not in result.columns:
+        result["indice_occulte"] = 0
+    result["indice_occulte"] = result["indice_occulte"].fillna(0).astype(int)
+
+    if "indice_occulte_100" not in result.columns:
+        result["indice_occulte_100"] = 0
+    result["indice_occulte_100"] = result["indice_occulte_100"].fillna(0).round(2)
+
+    if "classe_occulte" not in result.columns:
+        result["classe_occulte"] = "Nessuna"
+    result["classe_occulte"] = result["classe_occulte"].fillna("Nessuna")
+
+    for col in [
+        "num_ticket_quota_extra",
+        "tot_ticket_utente",
+        "perc_ticket_quota_extra"
+    ]:
+        if col not in result.columns:
+            result[col] = 0
+        result[col] = result[col].fillna(0)
+
+    result["num_ticket_quota_extra"] = result["num_ticket_quota_extra"].astype(int)
+    result["tot_ticket_utente"] = result["tot_ticket_utente"].astype(int)
+    result["perc_ticket_quota_extra"] = result["perc_ticket_quota_extra"].round(2)
+
+    for col in [
+        "indice_similarity",
+        "peso_quota_medio",
+        "num_confronti",
+        "media_eventi_comuni"
+    ]:
+        if col not in result.columns:
+            result[col] = 0
+        result[col] = result[col].fillna(0)
+
+    result["num_confronti"] = result["num_confronti"].astype(int)
 
     return result.sort_values(
-        by=["indice_similarity", "num_confronti", "peso_quota_medio"],
-        ascending=[False, False, False]
+        by=[
+            "num_ticket_quota_extra",
+            "perc_ticket_quota_extra",
+            "indice_occulte_100",
+            "indice_similarity",
+            "num_confronti"
+        ],
+        ascending=[False, False, False, False, False]
     )
 
 
@@ -503,7 +745,7 @@ def invia_email(files: list[str], body: str):
                 f.read(),
                 maintype="text",
                 subtype="csv",
-                filename=file_path
+                filename=os.path.basename(file_path)
             )
 
     try:
@@ -562,6 +804,7 @@ def main():
 
     generated_files = []
     body_parts = []
+    lista_occulte_per_cf = []
 
     df_identiche = genera_ripetute_identiche(tickets_focus_agg)
 
@@ -575,6 +818,9 @@ def main():
     for threshold in OCCULT_THRESHOLDS:
         df_occulte = genera_ripetute_occulte(tickets_focus_agg, threshold)
 
+        df_occulte_cf = conta_occulte_per_cf(df_occulte, threshold)
+        lista_occulte_per_cf.append(df_occulte_cf)
+
         if not df_occulte.empty:
             file_occulte = f"ripetute_occulte_{threshold}.csv"
             salva_csv(df_occulte, file_occulte)
@@ -583,6 +829,17 @@ def main():
                 f"Ripetute occulte focus >= {threshold}: {len(df_occulte)}"
             )
             logging.info(f"Generato: {file_occulte}")
+
+    df_indice_occulte = crea_indice_occulte(lista_occulte_per_cf)
+
+    if not df_indice_occulte.empty:
+        file_occulte_indice = "indice_occulte_utenti.csv"
+        salva_csv(df_indice_occulte, file_occulte_indice)
+        generated_files.append(file_occulte_indice)
+        body_parts.append(
+            f"Indice occulte utenti calcolato: {len(df_indice_occulte)} utenti"
+        )
+        logging.info(f"Generato: {file_occulte_indice}")
 
     df_similari = genera_ticket_similari(
         tickets_focus_agg,
@@ -595,6 +852,20 @@ def main():
         generated_files.append(file_similari)
         body_parts.append(f"Ticket similari trovati: {len(df_similari)}")
         logging.info(f"Generato: {file_similari}")
+
+    df_indice_quota_extra = genera_indice_quota_extra(
+        df_similari,
+        tickets_full_agg
+    )
+
+    if not df_indice_quota_extra.empty:
+        file_quota_extra = "indice_quota_extra_utenti.csv"
+        salva_csv(df_indice_quota_extra, file_quota_extra)
+        generated_files.append(file_quota_extra)
+        body_parts.append(
+            f"Indice quota extra utenti calcolato: {len(df_indice_quota_extra)} utenti"
+        )
+        logging.info(f"Generato: {file_quota_extra}")
 
     df_similarity_utenti = genera_similarity_clustering_utente(
         tickets_full_agg,
@@ -610,20 +881,20 @@ def main():
         )
         logging.info(f"Generato: {file_similarity}")
 
-        df_indice_similarity = genera_indice_similarity_utenti(
-            df_similarity_utenti
-        )
+    df_indice_similarity = genera_indice_similarity_utenti(
+        df_similarity_utenti,
+        df_indice_occulte,
+        df_indice_quota_extra
+    )
 
-        if not df_indice_similarity.empty:
-            file_indice = "indice_similarity_utenti.csv"
-            salva_csv(df_indice_similarity, file_indice)
-            generated_files.append(file_indice)
-            body_parts.append(
-                f"Indice similarity utenti calcolato: {len(df_indice_similarity)} utenti"
-            )
-            logging.info(f"Generato: {file_indice}")
-    else:
-        logging.info("Nessun cluster utente con similarity significativa trovato.")
+    if not df_indice_similarity.empty:
+        file_indice = "indice_similarity_utenti.csv"
+        salva_csv(df_indice_similarity, file_indice)
+        generated_files.append(file_indice)
+        body_parts.append(
+            f"Indice similarity utenti completo calcolato: {len(df_indice_similarity)} utenti"
+        )
+        logging.info(f"Generato: {file_indice}")
 
     if generated_files:
         body = "\n".join(body_parts)

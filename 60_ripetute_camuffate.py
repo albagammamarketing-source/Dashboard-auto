@@ -19,6 +19,8 @@ OCCURRENCE_THRESHOLD = 2
 OCCULT_THRESHOLDS = [4, 5, 6]
 QUOTA_EXTRA_THRESHOLD = 108
 
+OUTPUT_DIR = "output"
+
 SIMILARITY_MINIMA_UTENTE = 80.0
 CSV_SEPARATOR = ";"
 CSV_DECIMAL = ","
@@ -121,7 +123,11 @@ logging.basicConfig(
 )
 
 
-def salva_csv(df: pd.DataFrame, file_path: str):
+def salva_csv(df: pd.DataFrame, file_name: str):
+    os.makedirs(OUTPUT_DIR, exist_ok=True)
+
+    file_path = os.path.join(OUTPUT_DIR, file_name)
+
     df.to_csv(
         file_path,
         index=False,
@@ -129,6 +135,8 @@ def salva_csv(df: pd.DataFrame, file_path: str):
         decimal=CSV_DECIMAL,
         encoding="utf-8-sig"
     )
+
+    return file_path
 
 
 def crea_engines():

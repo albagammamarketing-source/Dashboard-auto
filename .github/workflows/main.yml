@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout private repository
         uses: actions/checkout@v4
 
       - name: Configure Git
@@ -46,17 +46,18 @@ jobs:
         run: |
           python 60_ripetute_camuffate.py
 
-      - name: Save CSV files to output folder
+      - name: Push CSV to public output repository
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
         run: |
-          mkdir -p output
-          find . -name "*.csv" -not -path "./output/*" -exec cp {} output/ \;
+          git clone https://x-access-token:${GH_PAT}@github.com/albagammamarketing-source/output-60_ripetute_camuffate.git output_repo
 
-      - name: Commit output files
-        run: |
-          git pull
+          cp output/*.csv output_repo/
 
-          git add output/
+          cd output_repo
 
-          git commit -m "Aggiornamento automatico output CSV" || echo "Nessuna modifica da salvare"
+          git add .
+
+          git commit -m "Aggiornamento automatico CSV" || echo "Nessuna modifica da salvare"
 
           git push

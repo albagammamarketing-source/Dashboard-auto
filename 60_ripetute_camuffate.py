@@ -25,20 +25,16 @@ SIMILARITY_MINIMA_UTENTE = 80.0
 CSV_SEPARATOR = ";"
 CSV_DECIMAL = ","
 
-pd.set_option("future.no_silent_downcasting", True)
+try:
+    pd.set_option("future.no_silent_downcasting", True)
+except Exception:
+    pass
 
 SCOMMESSE_FOCUS = [
     1, 13353, 16035, 16177, 16190, 16474, 17589, 17637, 19804,
     21147, 22580, 24481, 26435, 26437, 26441, 26443, 26445,
     26446, 26450, 26454, 26465, 26466, 26468
 ]
-
-# =====================================================
-# CONFIGURAZIONE SICURA PER GITHUB ACTIONS / SECRETS
-# =====================================================
-# Questi valori NON devono stare nel codice.
-# Vanno inseriti in GitHub:
-# Settings -> Secrets and variables -> Actions -> New repository secret
 
 EMAIL_SENDER = os.getenv("EMAIL_SENDER")
 EMAIL_PASSWORD = os.getenv("EMAIL_PASSWORD")
@@ -67,30 +63,28 @@ REQUIRED_ENV_VARS = {
 }
 
 missing_vars = [name for name, value in REQUIRED_ENV_VARS.items() if not value]
+
 if missing_vars:
     raise ValueError(
         "Variabili ambiente mancanti. Crea questi GitHub Secrets: "
         + ", ".join(missing_vars)
     )
 
-try:
-    DB_PORT = int(DB_PORT)
-except ValueError as exc:
-    raise ValueError("DB_PORT deve essere un numero, ad esempio 3306") from exc
+DB_PORT = int(DB_PORT)
 
 DB_CONFIGS = {
-    "360BET": {"user": DB_USER, "password": DB_PASSWORD, "host": DB_HOST, "port": DB_PORT, "database": "AnalisiTickets_360BET"},
-    "ADMIRAL": {"user": DB_USER, "password": DB_PASSWORD, "host": DB_HOST, "port": DB_PORT, "database": "AnalisiTickets_ADMIRAL"},
-    "BBET": {"user": DB_USER, "password": DB_PASSWORD, "host": DB_HOST, "port": DB_PORT, "database": "AnalisiTickets_BBET"},
-    "DOMUSBET": {"user": DB_USER, "password": DB_PASSWORD, "host": DB_HOST, "port": DB_PORT, "database": "AnalisiTickets_DOMUSBET"},
-    "MARATHON": {"user": DB_USER, "password": DB_PASSWORD, "host": DB_HOST, "port": DB_PORT, "database": "AnalisiTickets_MARATHON"},
-    "SKYWIND": {"user": DB_USER, "password": DB_PASSWORD, "host": DB_HOST, "port": DB_PORT, "database": "AnalisiTickets_SKYWIND"},
-    "SPORTBET": {"user": DB_USER, "password": DB_PASSWORD, "host": DB_HOST, "port": DB_PORT, "database": "AnalisiTickets_SPORTBET"},
-    "STANLEYBET": {"user": DB_USER, "password": DB_PASSWORD, "host": DB_HOST, "port": DB_PORT, "database": "AnalisiTickets_STANLEYBET"},
-    "STARCASINO": {"user": DB_USER, "password": DB_PASSWORD, "host": DB_HOST, "port": DB_PORT, "database": "AnalisiTickets_STARCASINO"},
-    "TOTOSI": {"user": DB_USER, "password": DB_PASSWORD, "host": DB_HOST, "port": DB_PORT, "database": "AnalisiTickets_TOTOSI"},
-    "VINCITU": {"user": DB_USER, "password": DB_PASSWORD, "host": DB_HOST, "port": DB_PORT, "database": "AnalisiTickets_VINCITU"},
-    "WILLIAMHILL": {"user": DB_USER, "password": DB_PASSWORD, "host": DB_HOST, "port": DB_PORT, "database": "AnalisiTickets_WILLIAMHILL"},
+    "360BET": {"database": "AnalisiTickets_360BET"},
+    "ADMIRAL": {"database": "AnalisiTickets_ADMIRAL"},
+    "BBET": {"database": "AnalisiTickets_BBET"},
+    "DOMUSBET": {"database": "AnalisiTickets_DOMUSBET"},
+    "MARATHON": {"database": "AnalisiTickets_MARATHON"},
+    "SKYWIND": {"database": "AnalisiTickets_SKYWIND"},
+    "SPORTBET": {"database": "AnalisiTickets_SPORTBET"},
+    "STANLEYBET": {"database": "AnalisiTickets_STANLEYBET"},
+    "STARCASINO": {"database": "AnalisiTickets_STARCASINO"},
+    "TOTOSI": {"database": "AnalisiTickets_TOTOSI"},
+    "VINCITU": {"database": "AnalisiTickets_VINCITU"},
+    "WILLIAMHILL": {"database": "AnalisiTickets_WILLIAMHILL"},
 }
 
 BASE_FILTER_WINDOW = """
@@ -123,7 +117,7 @@ logging.basicConfig(
 )
 
 
-def salva_csv(df: pd.DataFrame, file_name: str):
+def salva_csv(df: pd.DataFrame, file_name: str) -> str:
     os.makedirs(OUTPUT_DIR, exist_ok=True)
 
     file_path = os.path.join(OUTPUT_DIR, file_name)
@@ -136,17 +130,26 @@ def salva_csv(df: pd.DataFrame, file_name: str):
         encoding="utf-8-sig"
     )
 
+    logging.info(f"Generato: {file_path}")
+    logging.info(f"File presente? {os.path.exists(file_path)}")
+
     return file_path
 
 
 def crea_engines():
-    return {
-        name: create_engine(
-            f"mysql+mysqlconnector://{cfg['user']}:{cfg['password']}@"
-            f"{cfg['host']}:{cfg['port']}/{cfg['database']}"
+    engines = {}
+
+    for name, cfg in DB_CONFIGS.items():
+        database = cfg["database"]
+
+        url = (
+            f"mysql+mysqlconnector://{DB_USER}:{DB_PASSWORD}"
+            f"@{DB_HOST}:{DB_PORT}/{database}"
         )
-        for name, cfg in DB_CONFIGS.items()
-    }
+
+        engines[name] = create_engine(url)
+
+    return engines
 
 
 def build_filter(alias: str) -> str:
@@ -212,6 +215,9 @@ def add_tuple_key(df: pd.DataFrame) -> pd.DataFrame:
     df = df.copy()
 
     for col in TUPLE_FIELDS:
+        if col not in df.columns:
+            df[col] = ""
+
         df[col] = (
             df[col]
             .fillna("")
@@ -220,11 +226,16 @@ def add_tuple_key(df: pd.DataFrame) -> pd.DataFrame:
             .str.lower()
             .str.replace(r"\|", " ", regex=True)
         )
+
         df[col] = df[col].replace("", "n/a")
 
     df["tuple"] = df[TUPLE_FIELDS].apply(lambda row: "|".join(row), axis=1)
     df["scommessa"] = pd.to_numeric(df["scommessa"], errors="coerce")
     df["quota"] = pd.to_numeric(df["quota"], errors="coerce")
+    df["importo_pagato"] = pd.to_numeric(
+        df["importo_pagato"],
+        errors="coerce"
+    ).fillna(0)
 
     return df
 
@@ -267,6 +278,7 @@ def aggregate_full_by_id(df: pd.DataFrame) -> pd.DataFrame:
 
 def genera_ripetute_identiche(tickets_agg: pd.DataFrame) -> pd.DataFrame:
     tickets_agg = tickets_agg.copy()
+
     tickets_agg["sequence"] = tickets_agg["tuple"].apply(
         lambda values: "|".join(sorted(values))
     )
@@ -293,12 +305,17 @@ def genera_ripetute_identiche(tickets_agg: pd.DataFrame) -> pd.DataFrame:
     return pd.DataFrame(results)
 
 
-def genera_ripetute_occulte(tickets_agg: pd.DataFrame, threshold: int) -> pd.DataFrame:
+def genera_ripetute_occulte(
+    tickets_agg: pd.DataFrame,
+    threshold: int
+) -> pd.DataFrame:
     results = []
     records = tickets_agg.to_dict("records")
 
     for ticket_1, ticket_2 in combinations(records, 2):
-        eventi_comuni = set(ticket_1["tuple"]).intersection(set(ticket_2["tuple"]))
+        eventi_comuni = set(ticket_1["tuple"]).intersection(
+            set(ticket_2["tuple"])
+        )
 
         if len(eventi_comuni) >= threshold:
             results.append({
@@ -323,19 +340,23 @@ def genera_ripetute_occulte(tickets_agg: pd.DataFrame, threshold: int) -> pd.Dat
 
 
 def conta_occulte_per_cf(df_occulte: pd.DataFrame, soglia: int) -> pd.DataFrame:
+    col_name = f"num_occulte_{soglia}"
+
     if df_occulte.empty:
-        return pd.DataFrame(columns=[
-            "concessionario",
-            "cf",
-            f"num_occulte_{soglia}"
-        ])
+        return pd.DataFrame(columns=["concessionario", "cf", col_name])
 
     cf_1 = df_occulte[["concessionario_1", "cf_1"]].rename(
-        columns={"concessionario_1": "concessionario", "cf_1": "cf"}
+        columns={
+            "concessionario_1": "concessionario",
+            "cf_1": "cf"
+        }
     )
 
     cf_2 = df_occulte[["concessionario_2", "cf_2"]].rename(
-        columns={"concessionario_2": "concessionario", "cf_2": "cf"}
+        columns={
+            "concessionario_2": "concessionario",
+            "cf_2": "cf"
+        }
     )
 
     combined = pd.concat([cf_1, cf_2], ignore_index=True)
@@ -344,11 +365,16 @@ def conta_occulte_per_cf(df_occulte: pd.DataFrame, soglia: int) -> pd.DataFrame:
         combined
         .groupby(["concessionario", "cf"])
         .size()
-        .reset_index(name=f"num_occulte_{soglia}")
+        .reset_index(name=col_name)
     )
 
 
 def crea_indice_occulte(lista_df_occulte: list[pd.DataFrame]) -> pd.DataFrame:
+    lista_df_occulte = [
+        df for df in lista_df_occulte
+        if df is not None and not df.empty
+    ]
+
     if not lista_df_occulte:
         return pd.DataFrame()
 
@@ -364,8 +390,10 @@ def crea_indice_occulte(lista_df_occulte: list[pd.DataFrame]) -> pd.DataFrame:
 
     for soglia in OCCULT_THRESHOLDS:
         col = f"num_occulte_{soglia}"
+
         if col not in df_occulte.columns:
             df_occulte[col] = 0
+
         df_occulte[col] = df_occulte[col].astype(int)
 
     df_occulte["indice_occulte"] = (
@@ -381,14 +409,13 @@ def crea_indice_occulte(lista_df_occulte: list[pd.DataFrame]) -> pd.DataFrame:
     def assegna_classe(valore):
         if valore == 0:
             return "Nessuna"
-        elif valore <= 30:
+        if valore <= 30:
             return "Bassa"
-        elif valore <= 60:
+        if valore <= 60:
             return "Media"
-        elif valore <= 80:
+        if valore <= 80:
             return "Alta"
-        else:
-            return "Molto Alta"
+        return "Molto Alta"
 
     df_occulte["classe_occulte"] = df_occulte["indice_occulte_100"].apply(
         assegna_classe
@@ -434,6 +461,7 @@ def genera_ticket_similari(
 
         focus_set_1 = set(ticket_1["tuple"])
         focus_set_2 = set(ticket_2["tuple"])
+
         eventi_comuni_focus = focus_set_1.intersection(focus_set_2)
 
         if len(eventi_comuni_focus) < 4:
@@ -451,9 +479,14 @@ def genera_ticket_similari(
         if len(extra_1) + len(extra_2) != 1:
             continue
 
-        extra_tuple = list(extra_1)[0] if len(extra_1) == 1 else list(extra_2)[0]
-        extra_lato = "ticket_1" if len(extra_1) == 1 else "ticket_2"
-        eventi_extra = full_eventi_1 if extra_lato == "ticket_1" else full_eventi_2
+        if len(extra_1) == 1:
+            extra_tuple = list(extra_1)[0]
+            extra_lato = "ticket_1"
+            eventi_extra = full_eventi_1
+        else:
+            extra_tuple = list(extra_2)[0]
+            extra_lato = "ticket_2"
+            eventi_extra = full_eventi_2
 
         extra_quota = None
         extra_scommessa = None
@@ -649,7 +682,8 @@ def genera_indice_similarity_utenti(
         ])
     else:
         base = (
-            df_similarity.groupby(["concessionario", "cf"])
+            df_similarity
+            .groupby(["concessionario", "cf"])
             .agg({
                 "similarity_percent": "mean",
                 "peso_quota": "mean",
@@ -748,13 +782,16 @@ def invia_email(files: list[str], body: str):
     msg.set_content(body)
 
     for file_path in files:
-        with open(file_path, "rb") as f:
-            msg.add_attachment(
-                f.read(),
-                maintype="text",
-                subtype="csv",
-                filename=os.path.basename(file_path)
-            )
+        try:
+            with open(file_path, "rb") as f:
+                msg.add_attachment(
+                    f.read(),
+                    maintype="text",
+                    subtype="csv",
+                    filename=os.path.basename(file_path)
+                )
+        except Exception as e:
+            logging.error(f"Errore allegando file {file_path}: {e}")
 
     try:
         with smtplib.SMTP(
@@ -773,38 +810,56 @@ def invia_email(files: list[str], body: str):
 
 
 def main():
+    os.makedirs(OUTPUT_DIR, exist_ok=True)
+
     engines = crea_engines()
     all_frames = []
 
     for concessionario, engine in engines.items():
         try:
             logging.info(f"Caricamento ticket per {concessionario}...")
+
             df = carica_tickets(engine)
             df["concessionario"] = concessionario
             all_frames.append(df)
+
             logging.info(f"{concessionario}: caricati {len(df)} record.")
 
         except (ProgrammingError, OperationalError) as e:
-            logging.warning(f"Skip {concessionario}: {e}")
+            logging.warning(f"Database saltato {concessionario}: {e}")
 
         except Exception as e:
             logging.error(f"Errore su {concessionario}: {e}")
 
     if not all_frames:
-        logging.info("Nessun database disponibile. Termino.")
+        logging.info("Nessun database disponibile.")
+        salva_csv(
+            pd.DataFrame([{"stato": "nessun_database_disponibile"}]),
+            "execution_status.csv"
+        )
         return
 
     tk = pd.concat(all_frames, ignore_index=True)
 
     if tk.empty:
         logging.info("Nessun ticket trovato nella finestra temporale.")
+        salva_csv(
+            pd.DataFrame([{"stato": "nessun_ticket_trovato"}]),
+            "execution_status.csv"
+        )
         return
+
+    logging.info(f"Totale record caricati: {len(tk)}")
 
     tk = add_tuple_key(tk)
     tk_focus = filtra_solo_eventi_focus(tk)
 
     if tk_focus.empty:
         logging.info("Nessun evento focus trovato nei ticket estratti.")
+        salva_csv(
+            pd.DataFrame([{"stato": "nessun_evento_focus_trovato"}]),
+            "execution_status.csv"
+        )
         return
 
     tickets_focus_agg = aggregate_by_id(tk_focus)
@@ -817,11 +872,9 @@ def main():
     df_identiche = genera_ripetute_identiche(tickets_focus_agg)
 
     if not df_identiche.empty:
-        file_identiche = "ripetute_tickets.csv"
-        salva_csv(df_identiche, file_identiche)
-        generated_files.append(file_identiche)
+        file_path = salva_csv(df_identiche, "ripetute_tickets.csv")
+        generated_files.append(file_path)
         body_parts.append(f"Ripetute identiche focus trovate: {len(df_identiche)}")
-        logging.info(f"Generato: {file_identiche}")
 
     for threshold in OCCULT_THRESHOLDS:
         df_occulte = genera_ripetute_occulte(tickets_focus_agg, threshold)
@@ -830,24 +883,21 @@ def main():
         lista_occulte_per_cf.append(df_occulte_cf)
 
         if not df_occulte.empty:
-            file_occulte = f"ripetute_occulte_{threshold}.csv"
-            salva_csv(df_occulte, file_occulte)
-            generated_files.append(file_occulte)
+            file_name = f"ripetute_occulte_{threshold}.csv"
+            file_path = salva_csv(df_occulte, file_name)
+            generated_files.append(file_path)
             body_parts.append(
                 f"Ripetute occulte focus >= {threshold}: {len(df_occulte)}"
             )
-            logging.info(f"Generato: {file_occulte}")
 
     df_indice_occulte = crea_indice_occulte(lista_occulte_per_cf)
 
     if not df_indice_occulte.empty:
-        file_occulte_indice = "indice_occulte_utenti.csv"
-        salva_csv(df_indice_occulte, file_occulte_indice)
-        generated_files.append(file_occulte_indice)
+        file_path = salva_csv(df_indice_occulte, "indice_occulte_utenti.csv")
+        generated_files.append(file_path)
         body_parts.append(
             f"Indice occulte utenti calcolato: {len(df_indice_occulte)} utenti"
         )
-        logging.info(f"Generato: {file_occulte_indice}")
 
     df_similari = genera_ticket_similari(
         tickets_focus_agg,
@@ -855,11 +905,9 @@ def main():
     )
 
     if not df_similari.empty:
-        file_similari = "ticket_similari.csv"
-        salva_csv(df_similari, file_similari)
-        generated_files.append(file_similari)
+        file_path = salva_csv(df_similari, "ticket_similari.csv")
+        generated_files.append(file_path)
         body_parts.append(f"Ticket similari trovati: {len(df_similari)}")
-        logging.info(f"Generato: {file_similari}")
 
     df_indice_quota_extra = genera_indice_quota_extra(
         df_similari,
@@ -867,13 +915,14 @@ def main():
     )
 
     if not df_indice_quota_extra.empty:
-        file_quota_extra = "indice_quota_extra_utenti.csv"
-        salva_csv(df_indice_quota_extra, file_quota_extra)
-        generated_files.append(file_quota_extra)
+        file_path = salva_csv(
+            df_indice_quota_extra,
+            "indice_quota_extra_utenti.csv"
+        )
+        generated_files.append(file_path)
         body_parts.append(
             f"Indice quota extra utenti calcolato: {len(df_indice_quota_extra)} utenti"
         )
-        logging.info(f"Generato: {file_quota_extra}")
 
     df_similarity_utenti = genera_similarity_clustering_utente(
         tickets_full_agg,
@@ -881,13 +930,14 @@ def main():
     )
 
     if not df_similarity_utenti.empty:
-        file_similarity = "analisi_similarity_utenti.csv"
-        salva_csv(df_similarity_utenti, file_similarity)
-        generated_files.append(file_similarity)
+        file_path = salva_csv(
+            df_similarity_utenti,
+            "analisi_similarity_utenti.csv"
+        )
+        generated_files.append(file_path)
         body_parts.append(
             f"Cluster utenti con ticket simili trovati: {len(df_similarity_utenti)}"
         )
-        logging.info(f"Generato: {file_similarity}")
 
     df_indice_similarity = genera_indice_similarity_utenti(
         df_similarity_utenti,
@@ -896,19 +946,35 @@ def main():
     )
 
     if not df_indice_similarity.empty:
-        file_indice = "indice_similarity_utenti.csv"
-        salva_csv(df_indice_similarity, file_indice)
-        generated_files.append(file_indice)
+        file_path = salva_csv(
+            df_indice_similarity,
+            "indice_similarity_utenti.csv"
+        )
+        generated_files.append(file_path)
         body_parts.append(
             f"Indice similarity utenti completo calcolato: {len(df_indice_similarity)} utenti"
         )
-        logging.info(f"Generato: {file_indice}")
 
     if generated_files:
         body = "\n".join(body_parts)
         invia_email(generated_files, body)
-        logging.info("Report generati e inviati.")
+
+        salva_csv(
+            pd.DataFrame([{
+                "stato": "report_generati",
+                "numero_file_generati": len(generated_files),
+                "file_generati": ", ".join(generated_files)
+            }]),
+            "execution_status.csv"
+        )
+
+        logging.info("Report generati.")
     else:
+        salva_csv(
+            pd.DataFrame([{"stato": "nessun_report_generato"}]),
+            "execution_status.csv"
+        )
+
         logging.info("Nessun report da inviare.")
 
 
@@ -919,4 +985,17 @@ if __name__ == "__main__":
 
     except Exception:
         logging.exception("Errore durante l'esecuzione")
+
+        try:
+            os.makedirs(OUTPUT_DIR, exist_ok=True)
+            pd.DataFrame([{"stato": "errore_esecuzione"}]).to_csv(
+                os.path.join(OUTPUT_DIR, "execution_status.csv"),
+                index=False,
+                sep=CSV_SEPARATOR,
+                decimal=CSV_DECIMAL,
+                encoding="utf-8-sig"
+            )
+        except Exception:
+            pass
+
         sys.exit(1)

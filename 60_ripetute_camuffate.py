@@ -9,7 +9,7 @@ from email.message import EmailMessage
 from sqlalchemy import create_engine
 from sqlalchemy.exc import ProgrammingError, OperationalError
 
-FETCH_WINDOW_MINUTES = 5000
+FETCH_WINDOW_MINUTES = 15000
 
 DATA_INIZIO = None
 DATA_FINE = None

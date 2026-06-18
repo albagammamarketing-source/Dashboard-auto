@@ -11,8 +11,8 @@ from sqlalchemy.exc import ProgrammingError, OperationalError
 
 FETCH_WINDOW_MINUTES = 15000
 
-DATA_INIZIO = None
-DATA_FINE = None
+DATA_INIZIO = '2025-10-01 00:00:00'
+DATA_FINE = '2026-07-03 00:00:00'
 
 SUM_THRESHOLD = 1
 OCCURRENCE_THRESHOLD = 2

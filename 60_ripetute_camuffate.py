@@ -596,7 +596,7 @@ def genera_ticket_similari(
 
         eventi_comuni_focus = focus_set_1.intersection(focus_set_2)
 
-        if len(eventi_comuni_focus) < 4:
+        if len(eventi_comuni_focus) < 3:
             continue
 
         full_eventi_1 = full_map.get(key_1, [])

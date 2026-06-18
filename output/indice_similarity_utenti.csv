@@ -1,5 +1,5 @@
 ﻿concessionario;cf;indice_similarity;peso_quota_medio;num_confronti;media_eventi_comuni;num_occulte_4;num_occulte_5;num_occulte_6;indice_occulte;indice_occulte_100;classe_occulte;tot_ticket_utente;num_ticket_quota_extra;perc_ticket_quota_extra
-ADMIRAL;n/a;87,19;166,38;5009;10,41;355078;276612;210822;1540768;100,0;Molto Alta;1720;10;0,58
+ADMIRAL;n/a;87,19;166,43;5015;10,41;359278;280010;213374;1559420;100,0;Molto Alta;1737;10;0,58
 STARCASINO;mdamtt90p22g388i;88,89;102,58;9;5,11;42;18;2;84;100,0;Molto Alta;7;5;71,43
 MARATHON;lbbsfn93a03i531b;95,24;103,4;6;5,67;12;12;6;54;100,0;Molto Alta;6;3;50,0
 DOMUSBET;lgrfnc84r18a509a;90,91;167,5;1;10,0;14;14;14;84;100,0;Molto Alta;8;2;25,0
@@ -23,7 +23,7 @@ SPORTBET;trtflv86a61f839z;100,0;285,83;4;5,25;10;10;2;36;100,0;Molto Alta;14;0;0
 BBET;bccgln74p11g273c;100,0;184,25;3;12,0;6;6;6;36;100,0;Molto Alta;3;0;0,0
 BBET;bccgpp74a29d976s;100,0;197,5;3;6,0;30;30;30;180;100,0;Molto Alta;18;0;0,0
 BBET;fdufnc76h14i693s;100,0;288,94;3;18,0;8;8;8;48;100,0;Molto Alta;7;0;0,0
-BBET;plugpp78h21g273t;100,0;232,5;3;7,0;8;8;8;48;100,0;Molto Alta;13;0;0,0
+BBET;plugpp78h21g273t;100,0;232,5;3;7,0;8;8;8;48;100,0;Molto Alta;15;0;0,0
 DOMUSBET;bttndr97c12h703k;100,0;191,83;3;5,67;14;14;4;54;100,0;Molto Alta;6;0;0,0
 DOMUSBET;ccrftn92p03b963l;100,0;255,0;3;9,0;10;8;6;44;100,0;Molto Alta;9;0;0,0
 DOMUSBET;cppgnn82c15g596p;100,0;205,33;3;5,33;6;4;2;20;100,0;Molto Alta;7;0;0,0
@@ -33,7 +33,7 @@ DOMUSBET;lpssst90r02g273j;100,0;200,92;3;12,0;20;20;20;120;100,0;Molto Alta;16;0
 DOMUSBET;mhmhdd03p01z336n;100,0;174,04;3;8,0;6;6;6;36;100,0;Molto Alta;8;0;0,0
 DOMUSBET;mlncll80d09d086k;100,0;143,0;3;10,0;6;6;6;36;100,0;Molto Alta;7;0;0,0
 DOMUSBET;nblfnc01p15h096z;100,0;180,0;3;9,0;6;6;6;36;100,0;Molto Alta;3;0;0,0
-DOMUSBET;pscnnt89a61f839f;100,0;280,0;3;5,0;6;6;0;18;100,0;Molto Alta;8;0;0,0
+DOMUSBET;pscnnt89a61f839f;100,0;280,0;3;5,0;6;6;0;18;100,0;Molto Alta;9;0;0,0
 DOMUSBET;ptslcu88p02h501v;100,0;137,86;3;7,0;6;6;6;36;100,0;Molto Alta;4;0;0,0
 DOMUSBET;scicmn74p08a662f;100,0;409,3;3;4,67;2;2;2;12;100,0;Molto Alta;10;0;0,0
 DOMUSBET;trclsn93r09d122f;100,0;155,0;3;9,0;6;6;6;36;100,0;Molto Alta;4;0;0,0
@@ -81,6 +81,7 @@ BBET;spnrsr67r12c351n;100,0;171,91;1;11,0;2;2;2;12;100,0;Molto Alta;2;0;0,0
 BBET;srgsst62a20f537w;100,0;178,82;1;11,0;2;2;2;12;100,0;Molto Alta;2;0;0,0
 BBET;trlprz63c26b506w;100,0;309,17;1;6,0;6;2;2;16;100,0;Molto Alta;3;0;0,0
 BBET;vntfpp97p17f537r;100,0;192,14;1;7,0;6;6;6;36;100,0;Molto Alta;3;0;0,0
+DOMUSBET;blzmra99s23h703g;100,0;149,92;1;12,0;2;2;2;12;100,0;Molto Alta;2;0;0,0
 DOMUSBET;bncfnc81s09c751s;100,0;137,86;1;7,0;6;6;6;36;100,0;Molto Alta;8;0;0,0
 DOMUSBET;bncpla06s27f209c;100,0;134,29;1;7,0;2;2;2;12;100,0;Molto Alta;2;0;0,0
 DOMUSBET;bncsmn99l06h501g;100,0;161,6;1;10,0;2;2;2;12;100,0;Molto Alta;2;0;0,0
@@ -258,7 +259,7 @@ ADMIRAL;rexsmn85c05a271k;92,46;159,81;3;10,33;22;20;20;122;100,0;Molto Alta;10;0
 STANLEYBET;grzgpp93d08b963i;92,31;185,62;6;11,5;198;176;144;982;100,0;Molto Alta;19;0;0,0
 ADMIRAL;sprsvt69r27e054w;92,31;193,43;4;11,5;54;50;34;256;100,0;Molto Alta;11;0;0,0
 STARCASINO;frgfnc87t19c352x;92,31;184,22;2;8,0;28;16;6;78;100,0;Molto Alta;16;0;0,0
-MARATHON;gzzmrc90r14a089y;91,71;232,79;14;7,0;216;148;78;746;100,0;Molto Alta;27;0;0,0
+MARATHON;gzzmrc90r14a089y;91,71;232,79;14;7,0;226;158;88;806;100,0;Molto Alta;29;0;0,0
 DOMUSBET;crints89a65e372b;91,67;202,14;3;7,0;8;8;6;42;100,0;Molto Alta;8;0;0,0
 DOMUSBET;zppfnc00s15a028n;91,67;135,0;3;7,0;6;6;6;36;100,0;Molto Alta;10;0;0,0
 ADMIRAL;mdanrc72h10h509u;91,67;163,82;1;11,0;2;2;2;12;100,0;Molto Alta;3;0;0,0
@@ -354,6 +355,7 @@ STARCASINO;trcfrc03b13l682y;87,7;179,16;15;11,2;92;92;92;552;100,0;Molto Alta;12
 WILLIAMHILL;gmpmsm89r14i804s;87,69;226,53;16;9,94;216;150;100;816;100,0;Molto Alta;18;0;0,0
 DOMUSBET;mgllsn85r20l219h;87,58;250,76;3;9,33;6;6;6;36;100,0;Molto Alta;3;0;0,0
 WILLIAMHILL;grafng62m26b429t;87,58;165,25;3;9,33;6;6;6;36;100,0;Molto Alta;3;0;0,0
+SPORTBET;mntnrr87r29f205h;87,5;162,11;2;10,5;20;20;20;120;100,0;Molto Alta;6;0;0,0
 STARCASINO;mdagpp60e27f839h;87,5;152,19;2;10,5;20;20;20;120;100,0;Molto Alta;5;0;0,0
 STARCASINO;mdanrc72h10h509u;87,5;210,1;2;10,5;10;10;10;60;100,0;Molto Alta;8;0;0,0
 BBET;crdtrs70h67g113p;87,5;131,86;1;7,0;2;2;2;12;100,0;Molto Alta;2;0;0,0
@@ -384,7 +386,6 @@ STANLEYBET;rzzctn65p20h574r;86,67;179,54;1;13,0;6;6;6;36;100,0;Molto Alta;4;0;0,
 DOMUSBET;trpchr97c62g309s;86,66;171,44;2;9,5;34;24;20;142;100,0;Molto Alta;14;0;0,0
 STANLEYBET;clangl94d05c933e;86,66;300,36;2;9,5;42;34;26;188;100,0;Molto Alta;11;0;0,0
 WILLIAMHILL;gllrsr96s08e573j;86,6;193,52;2;6,5;6;6;6;36;100,0;Molto Alta;5;0;0,0
-DOMUSBET;lralcu06e16l682z;86,56;226,72;5;6,8;16;12;12;76;100,0;Molto Alta;14;0;0,0
 TOTOSI;prdmtt95m12f240h;86,46;219,32;2;12,0;24;22;18;122;100,0;Molto Alta;12;0;0,0
 DOMUSBET;pcccrs99c14i462h;86,3;140,59;3;8,33;6;6;6;36;100,0;Molto Alta;3;0;0,0
 DOMUSBET;frgcrs94a18e970w;86,11;197,82;2;9,0;14;14;10;72;100,0;Molto Alta;7;0;0,0
@@ -412,7 +413,7 @@ STARCASINO;dgdgpp67e25d086n;85,71;160,17;1;6,0;2;2;2;12;100,0;Molto Alta;2;0;0,0
 STARCASINO;frtfba74r07f052h;85,71;319,17;1;6,0;8;8;8;48;100,0;Molto Alta;6;0;0,0
 STARCASINO;mttlss73m05a271z;85,71;367,5;1;6,0;14;4;4;34;100,0;Molto Alta;13;0;0,0
 TOTOSI;fzagpp86p28h294m;85,71;146,83;1;6,0;2;2;2;12;100,0;Molto Alta;2;0;0,0
-TOTOSI;vklbjn84b12z153v;85,71;373,33;1;6,0;2;2;2;12;100,0;Molto Alta;2;0;0,0
+TOTOSI;vklbjn84b12z153v;85,71;373,33;1;6,0;4;2;2;14;100,0;Molto Alta;4;0;0,0
 WILLIAMHILL;pnglda93t15i422v;85,71;150,0;1;6,0;10;4;2;24;100,0;Molto Alta;6;0;0,0
 WILLIAMHILL;psngnn78h25f205e;85,71;148,33;1;6,0;22;20;12;98;100,0;Molto Alta;8;0;0,0
 WILLIAMHILL;tccmky01c10f205n;85,71;160,17;1;6,0;4;4;2;18;100,0;Molto Alta;6;0;0,0
@@ -422,6 +423,7 @@ BBET;bscmch94s66h501v;85,51;195,47;11;10,73;64;64;64;384;100,0;Molto Alta;18;0;0
 DOMUSBET;dlsgpp85e02a512h;85,46;222,5;3;7,67;32;28;28;172;100,0;Molto Alta;19;0;0,0
 SPORTBET;cngsmn93b18g377h;85,42;194,08;2;8,5;22;16;8;78;100,0;Molto Alta;10;0;0,0
 DOMUSBET;bstsmn00t22e058c;85,24;181,5;82;11,01;998;998;998;5988;100,0;Molto Alta;35;0;0,0
+DOMUSBET;lralcu06e16l682z;85,16;229,98;7;6,14;22;14;12;86;100,0;Molto Alta;17;0;0,0
 STARCASINO;mrnjgb01d03a488c;85,0;185,0;2;8,5;6;6;6;36;100,0;Molto Alta;3;0;0,0
 STANLEYBET;cmmntn05m23f912k;84,89;180,6;47;10,98;508;506;498;3014;100,0;Molto Alta;25;0;0,0
 DOMUSBET;trcmrc04a20g888p;84,74;233,61;4;6,75;38;24;20;146;100,0;Molto Alta;11;0;0,0
@@ -502,14 +504,14 @@ STANLEYBET;cflpri87a28g317u;83,33;146,5;1;10,0;2;2;2;12;100,0;Molto Alta;2;0;0,0
 STANLEYBET;cstntn63d22a064v;83,33;140,5;1;10,0;10;10;10;60;100,0;Molto Alta;8;0;0,0
 STANLEYBET;dgndra99l21a024o;83,33;184,6;1;10,0;16;16;12;84;100,0;Molto Alta;11;0;0,0
 STANLEYBET;gnnptr94r27h163k;83,33;146,0;1;10,0;2;2;2;12;100,0;Molto Alta;2;0;0,0
-STARCASINO;cscmrc90c10a494b;83,33;146,9;1;10,0;6;6;6;36;100,0;Molto Alta;9;0;0,0
+STARCASINO;cscmrc90c10a494b;83,33;146,9;1;10,0;6;6;6;36;100,0;Molto Alta;8;0;0,0
 STARCASINO;mrlntn81b26b180w;83,33;140,3;1;10,0;2;2;2;12;100,0;Molto Alta;2;0;0,0
 STARCASINO;rmllcu93m09f839p;83,33;161,6;1;10,0;2;2;2;12;100,0;Molto Alta;2;0;0,0
 TOTOSI;grrgnn02h09h223l;83,33;231,5;1;10,0;6;4;2;20;100,0;Molto Alta;4;0;0,0
 WILLIAMHILL;cpcndr72d22e472q;83,33;195,1;1;10,0;2;2;2;12;100,0;Molto Alta;2;0;0,0
 WILLIAMHILL;frzgvt94l24a479j;83,33;161,6;1;10,0;2;2;2;12;100,0;Molto Alta;2;0;0,0
-WILLIAMHILL;sclgrl95r08f205p;83,33;250,5;1;10,0;4;4;4;24;100,0;Molto Alta;5;0;0,0
-ADMIRAL;lnccld58m24e463d;83,16;233,64;4;8,5;30;30;28;174;100,0;Molto Alta;15;0;0,0
+WILLIAMHILL;sclgrl95r08f205p;83,33;250,5;1;10,0;12;12;12;72;100,0;Molto Alta;7;0;0,0
+ADMIRAL;lnccld58m24e463d;83,16;233,64;4;8,5;30;30;28;174;100,0;Molto Alta;17;0;0,0
 BBET;rlnbgi69e09c501c;82,83;167,92;3;9,67;40;34;30;198;100,0;Molto Alta;7;0;0,0
 BBET;drsgrd55d05c129m;82,57;192,64;2;9,5;68;64;46;334;100,0;Molto Alta;17;0;0,0
 BBET;mrtdnc86h28i119l;82,57;148,77;2;9,5;12;12;12;72;100,0;Molto Alta;4;0;0,0
@@ -548,6 +550,7 @@ SPORTBET;plmmda70m05f839r;81,16;193,14;6;7,17;62;56;50;324;100,0;Molto Alta;15;0
 DOMUSBET;trfmrk94c19a341h;80,91;177,32;2;12,5;82;76;70;444;100,0;Molto Alta;19;0;0,0
 SPORTBET;brsgrl72p19z129q;80,83;306,75;4;4,25;10;2;0;14;100,0;Molto Alta;6;0;0,0
 WILLIAMHILL;rgzdnl02a13d284e;80,61;219,17;3;8,33;40;28;22;162;100,0;Molto Alta;12;0;0,0
+SPORTBET;mzzmsm64a30b180g;80,0;163,92;3;4,0;24;6;2;42;100,0;Molto Alta;16;0;0,0
 DOMUSBET;mglndr99m06a783e;80,0;160,12;2;8,0;30;24;14;120;100,0;Molto Alta;10;0;0,0
 STARCASINO;bccmcl71b25e542q;80,0;184,19;2;8,0;28;22;18;126;100,0;Molto Alta;6;0;0,0
 360BET;llalfr85p63h223o;80,0;208,75;1;8,0;2;2;2;12;100,0;Molto Alta;3;0;0,0
@@ -569,7 +572,6 @@ DOMUSBET;pltndr01r14h501b;80,0;138,12;1;8,0;2;2;2;12;100,0;Molto Alta;4;0;0,0
 DOMUSBET;tstdnl68r03l219a;80,0;133,25;1;8,0;2;2;2;12;100,0;Molto Alta;5;0;0,0
 SPORTBET;cscbnt62m17f566e;80,0;226,88;1;8,0;2;2;2;12;100,0;Molto Alta;5;0;0,0
 SPORTBET;fggsmn85l31m052h;80,0;167,12;1;8,0;6;6;6;36;100,0;Molto Alta;4;0;0,0
-SPORTBET;mzzmsm64a30b180g;80,0;179,25;1;4,0;18;6;2;36;100,0;Molto Alta;13;0;0,0
 SPORTBET;sccgpp79b05i754r;80,0;136,0;1;8,0;6;6;6;36;100,0;Molto Alta;3;0;0,0
 STANLEYBET;mlarfl88p14i234g;80,0;300,42;1;12,0;26;18;16;110;100,0;Molto Alta;10;0;0,0
 STANLEYBET;prtvss89b68a269o;80,0;158,88;1;8,0;2;2;2;12;100,0;Molto Alta;3;0;0,0
@@ -675,6 +677,7 @@ DOMUSBET;brrsml02r22b111o;0,0;0,0;0;0,0;6;2;0;10;100,0;Molto Alta;5;0;0,0
 DOMUSBET;brzlvs85a23h163d;0,0;0,0;0;0,0;6;6;2;24;100,0;Molto Alta;7;0;0,0
 DOMUSBET;bslgpp60a05d789u;0,0;0,0;0;0,0;10;6;6;40;100,0;Molto Alta;8;0;0,0
 DOMUSBET;bssgny97s61g224s;0,0;0,0;0;0,0;2;2;2;12;100,0;Molto Alta;4;0;0,0
+DOMUSBET;bttlss76l15d969k;0,0;0,0;0;0,0;6;6;4;30;100,0;Molto Alta;10;0;0,0
 DOMUSBET;bttmcg82l08f205t;0,0;0,0;0;0,0;2;2;2;12;100,0;Molto Alta;7;0;0,0
 DOMUSBET;bzzfpp80l20e396c;0,0;0,0;0;0,0;6;4;0;14;100,0;Molto Alta;5;0;0,0
 DOMUSBET;cblfnc92a14l328g;0,0;0,0;0;0,0;2;2;2;12;100,0;Molto Alta;2;0;0,0
@@ -915,7 +918,6 @@ SPORTBET;mggfnc99r16g535z;0,0;0,0;0;0,0;2;2;2;12;100,0;Molto Alta;2;0;0,0
 SPORTBET;mggpfr96c04d862c;0,0;0,0;0;0,0;2;2;2;12;100,0;Molto Alta;6;0;0,0
 SPORTBET;mlfmra98t13l245q;0,0;0,0;0;0,0;8;8;8;48;100,0;Molto Alta;6;0;0,0
 SPORTBET;mntcsr75a15f839f;0,0;0,0;0;0,0;2;2;2;12;100,0;Molto Alta;9;0;0,0
-SPORTBET;mntnrr87r29f205h;0,0;0,0;0;0,0;2;2;2;12;100,0;Molto Alta;3;0;0,0
 SPORTBET;mrdptr97d16l219v;0,0;0,0;0;0,0;2;2;2;12;100,0;Molto Alta;2;0;0,0
 SPORTBET;mrldvd97p11d390d;0,0;0,0;0;0,0;2;2;2;12;100,0;Molto Alta;2;0;0,0
 SPORTBET;mrngcm05m07h501j;0,0;0,0;0;0,0;12;12;8;60;100,0;Molto Alta;4;0;0,0
@@ -986,6 +988,7 @@ STANLEYBET;rssmnl81l23h501e;0,0;0,0;0;0,0;4;4;2;18;100,0;Molto Alta;5;0;0,0
 STANLEYBET;scgfnc72d30g482k;0,0;0,0;0;0,0;2;2;2;12;100,0;Molto Alta;3;0;0,0
 STANLEYBET;sclsvt97l24h163y;0,0;0,0;0;0,0;2;2;2;12;100,0;Molto Alta;2;0;0,0
 STANLEYBET;sntmtt78a26e243r;0,0;0,0;0;0,0;6;6;6;36;100,0;Molto Alta;11;0;0,0
+STANLEYBET;srbmrc77p17h501m;0,0;0,0;0;0,0;2;2;2;12;100,0;Molto Alta;2;0;0,0
 STANLEYBET;tlnmrc94e18f952b;0,0;0,0;0;0,0;2;2;2;12;100,0;Molto Alta;5;0;0,0
 STANLEYBET;tmmgpp78c26a764r;0,0;0,0;0;0,0;8;8;8;48;100,0;Molto Alta;5;0;0,0
 STANLEYBET;trqptr69s26i125d;0,0;0,0;0;0,0;4;4;0;12;100,0;Molto Alta;4;0;0,0
@@ -1027,7 +1030,7 @@ STARCASINO;flgmrc88h09e882g;0,0;0,0;0;0,0;2;2;2;12;100,0;Molto Alta;4;0;0,0
 STARCASINO;flrlsn86h23b354l;0,0;0,0;0;0,0;12;6;2;30;100,0;Molto Alta;4;0;0,0
 STARCASINO;frlfba64s18e098t;0,0;0,0;0;0,0;4;4;4;24;100,0;Molto Alta;4;0;0,0
 STARCASINO;frvsmn99e13h769f;0,0;0,0;0;0,0;2;2;2;12;100,0;Molto Alta;4;0;0,0
-STARCASINO;gdslss92d27f912w;0,0;0,0;0;0,0;6;2;2;16;100,0;Molto Alta;8;0;0,0
+STARCASINO;gdslss92d27f912w;0,0;0,0;0;0,0;12;2;2;22;100,0;Molto Alta;11;0;0,0
 STARCASINO;grtgrl00d24h264n;0,0;0,0;0;0,0;2;2;2;12;100,0;Molto Alta;4;0;0,0
 STARCASINO;jgocmn99a10z129w;0,0;0,0;0;0,0;2;2;2;12;100,0;Molto Alta;2;0;0,0
 STARCASINO;jllsfn97e30l781b;0,0;0,0;0;0,0;2;2;2;12;100,0;Molto Alta;2;0;0,0
@@ -1200,7 +1203,7 @@ BBET;fnengl77r29c773g;0,0;0,0;0;0,0;2;2;0;6;60,0;Media;3;0;0,0
 BBET;glsmra62b50i494m;0,0;0,0;0;0,0;2;2;0;6;60,0;Media;4;0;0,0
 BBET;jlaslm75e11z352l;0,0;0,0;0;0,0;2;2;0;6;60,0;Media;5;0;0,0
 BBET;lsslnz00d60c710w;0,0;0,0;0;0,0;2;2;0;6;60,0;Media;3;0;0,0
-BBET;pglgni84r18e409c;0,0;0,0;0;0,0;2;2;0;6;60,0;Media;3;0;0,0
+BBET;pglgni84r18e409c;0,0;0,0;0;0,0;2;2;0;6;60,0;Media;4;0;0,0
 BBET;plzmnl94c16c286a;0,0;0,0;0;0,0;2;2;0;6;60,0;Media;4;0;0,0
 BBET;ppabgi71m12z110i;0,0;0,0;0;0,0;2;2;0;6;60,0;Media;5;0;0,0
 BBET;prgvcn89t05d122j;0,0;0,0;0;0,0;2;2;0;6;60,0;Media;3;0;0,0
@@ -1210,7 +1213,6 @@ BBET;vgllns87a15h703l;0,0;0,0;0;0,0;2;2;0;6;60,0;Media;5;0;0,0
 DOMUSBET;bllrrt63t16c044t;0,0;0,0;0;0,0;2;2;0;6;60,0;Media;2;0;0,0
 DOMUSBET;bnvntn90p03a494r;0,0;0,0;0;0,0;2;2;0;6;60,0;Media;4;0;0,0
 DOMUSBET;brgptr88l05z129o;0,0;0,0;0;0,0;2;2;0;6;60,0;Media;3;0;0,0
-DOMUSBET;bttlss76l15d969k;0,0;0,0;0;0,0;2;2;0;6;60,0;Media;9;0;0,0
 DOMUSBET;cmpmtt91b26g479r;0,0;0,0;0;0,0;2;2;0;6;60,0;Media;5;0;0,0
 DOMUSBET;crdmrz63b19m052h;0,0;0,0;0;0,0;2;2;0;6;60,0;Media;4;0;0,0
 DOMUSBET;crrfrc02h11e791s;0,0;0,0;0;0,0;2;2;0;6;60,0;Media;10;0;0,0
@@ -1483,6 +1485,7 @@ STARCASINO;frrcmn00a25i330d;0,0;0,0;0;0,0;2;0;0;2;20,0;Bassa;4;0;0,0
 STARCASINO;frtncl83t01f376n;0,0;0,0;0;0,0;2;0;0;2;20,0;Bassa;2;0;0,0
 STARCASINO;lnlmnc77t57f912r;0,0;0,0;0;0,0;2;0;0;2;20,0;Bassa;2;0;0,0
 STARCASINO;lvnntn03s12e514e;0,0;0,0;0;0,0;2;0;0;2;20,0;Bassa;2;0;0,0
+STARCASINO;mnnlsn92a14h501l;0,0;0,0;0;0,0;2;0;0;2;20,0;Bassa;16;0;0,0
 STARCASINO;mtnfrc07c21f023y;0,0;0,0;0;0,0;2;0;0;2;20,0;Bassa;3;0;0,0
 STARCASINO;mzzgnn95d16a944g;0,0;0,0;0;0,0;2;0;0;2;20,0;Bassa;4;0;0,0
 STARCASINO;plencl89c29a512x;0,0;0,0;0;0,0;2;0;0;2;20,0;Bassa;7;0;0,0
@@ -1600,7 +1603,7 @@ STARCASINO;mrnmrc75c08d458d;80,0;138,0;1;4,0;0;0;0;0;0,0;Nessuna;5;0;0,0
 360BET;vrsfnc84r18h163h;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 360BET;vsctms96c12h816m;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;2;0;0,0
 360BET;zppcst98b27b114d;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;2;0;0,0
-ADMIRAL;bbrvtr04m29f952n;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;2;0;0,0
+ADMIRAL;bbrvtr04m29f952n;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;3;0;0,0
 ADMIRAL;bcclsn07s24f463x;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 ADMIRAL;bdjsmn00l01z317y;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 ADMIRAL;bgtlcu71r08h769w;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
@@ -1903,6 +1906,7 @@ BBET;cvlgcm00c03l719m;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;2;0;0,0
 BBET;cvlrnn75d41b444g;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;2;0;0,0
 BBET;cvlvcn77e08g942b;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 BBET;cvrntn92c28f839p;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
+BBET;czzvcn88m31i438x;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 BBET;dbrmhl96l11e456r;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;2;0;0,0
 BBET;dbrmtt91m21e456g;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 BBET;dcgstg00t07z604n;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
@@ -1941,7 +1945,7 @@ BBET;dntcml92c19m088z;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 BBET;dnuvcn93c03f104v;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 BBET;dpadgi00h02m208e;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 BBET;dpcdnc00m18c002v;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;2;0;0,0
-BBET;dppdrn91m58e205f;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;2;0;0,0
+BBET;dppdrn91m58e205f;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;3;0;0,0
 BBET;drgcmn73m12a783s;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 BBET;drgcrs79t18d883i;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 BBET;drgsvt75t04g964r;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
@@ -1958,7 +1962,6 @@ BBET;fdundr01a04c710y;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 BBET;fgllnz01c07a717i;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;2;0;0,0
 BBET;flclcu79m11e058j;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 BBET;flcmrc74e24f520j;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;2;0;0,0
-BBET;flnpgr97p25g482j;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 BBET;fntfnc87h19h223x;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 BBET;frelfr04m02h501y;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 BBET;frnfba68r10e289w;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
@@ -2168,6 +2171,7 @@ BBET;scrgrg51a29i956z;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 BBET;scrlcu77b28d086a;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 BBET;scrsmn01p30f104q;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 BBET;scrvtr80b26f912m;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;2;0;0,0
+BBET;sdizdn00r29z330r;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 BBET;shrlzm77l09z100s;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 BBET;slrmrk87d06i754s;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 BBET;slrnmo00t54m102s;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;2;0;0,0
@@ -2569,6 +2573,7 @@ DOMUSBET;clpwtr91p15a662h;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 DOMUSBET;clrfrc93m31g702i;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;6;0;0,0
 DOMUSBET;cltfba02t18d390o;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;3;0;0,0
 DOMUSBET;cltmsm97b24g224x;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;2;0;0,0
+DOMUSBET;cltnnn03p16c351j;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 DOMUSBET;clzfnc87p30g751x;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;3;0;0,0
 DOMUSBET;clzfnc97b04a662z;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 DOMUSBET;clzndr05e02e333n;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;2;0;0,0
@@ -2740,6 +2745,7 @@ DOMUSBET;crtmra84s20h892e;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 DOMUSBET;crtmra88s15b429m;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;3;0;0,0
 DOMUSBET;crtmtt95t04l219m;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;2;0;0,0
 DOMUSBET;crtrnd85h23a089a;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;5;0;0,0
+DOMUSBET;crtsvt79a04f839l;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 DOMUSBET;crtvti82h04b963f;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;4;0;0,0
 DOMUSBET;crvdgi90a20c858y;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;2;0;0,0
 DOMUSBET;crvfnc92t14a192q;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;2;0;0,0
@@ -3423,7 +3429,6 @@ DOMUSBET;lfnlgu81a16e131p;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 DOMUSBET;lfnlss05h06i754r;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 DOMUSBET;lfrmrt72d05h703w;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 DOMUSBET;lfrplg85m09f924m;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
-DOMUSBET;lgamnl81a11l840h;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 DOMUSBET;lgandr98h17i754v;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 DOMUSBET;lgeccl97s63e507u;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;2;0;0,0
 DOMUSBET;lglsmn06p09e801n;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
@@ -3699,6 +3704,7 @@ DOMUSBET;mnnncl04p29b393f;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;6;0;0,0
 DOMUSBET;mnnrrt95e08c351h;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 DOMUSBET;mnrdrd01d20l219z;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;2;0;0,0
 DOMUSBET;mnrndr71a01f205o;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;3;0;0,0
+DOMUSBET;mnsgtn78s09c957x;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 DOMUSBET;mnssml00p25b202q;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 DOMUSBET;mntdvd87a27d150m;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 DOMUSBET;mntfnc77s28d612x;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;3;0;0,0
@@ -3988,6 +3994,7 @@ DOMUSBET;pllgpp88p30a783e;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 DOMUSBET;pllgtn67d16g508e;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;4;0;0,0
 DOMUSBET;plllcn03h24a512u;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;5;0;0,0
 DOMUSBET;plllei88b22e063u;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;4;0;0,0
+DOMUSBET;plllrt82r21a509r;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 DOMUSBET;pllndr04e02f839s;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 DOMUSBET;pllsnp95e10e131l;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;3;0;0,0
 DOMUSBET;plmfnc06r03i462f;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;5;0;0,0
@@ -5001,7 +5008,7 @@ MARATHON;frnglc77d30h501n;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;2;0;0,0
 MARATHON;frrfpp74r03h224q;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;2;0;0,0
 MARATHON;frrmrk02m22h501m;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 MARATHON;frsntn90t19a089n;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
-MARATHON;frssmn73t12b745k;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
+MARATHON;frssmn73t12b745k;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;2;0;0,0
 MARATHON;frtmnl86l21h501i;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 MARATHON;frvmsm73t14g713v;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;2;0;0,0
 MARATHON;fscmra88s21b715z;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
@@ -5166,7 +5173,7 @@ MARATHON;pcnfnc72m31h501i;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 MARATHON;pdcrcc82s26a509p;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 MARATHON;pdrpql08d07f839x;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;3;0;0,0
 MARATHON;pggfnc62b23e617k;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
-MARATHON;pglgnz51r31a176h;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
+MARATHON;pglgnz51r31a176h;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;2;0;0,0
 MARATHON;pgndns81a19h294n;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;3;0;0,0
 MARATHON;pgnmhl99p12d940h;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 MARATHON;pgnmrz81p01c133f;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
@@ -5364,7 +5371,6 @@ SPORTBET;bllgnn87p07l113p;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;2;0;0,0
 SPORTBET;bllndr68b05f284l;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 SPORTBET;bllsmn90a30a271y;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;2;0;0,0
 SPORTBET;bllvnt01a53g393p;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;6;0;0,0
-SPORTBET;blnglc80a14e690y;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 SPORTBET;blvltr88t19z614u;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 SPORTBET;blzgpp95h12l259t;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;5;0;0,0
 SPORTBET;bncmra71r14g535f;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
@@ -5916,7 +5922,7 @@ SPORTBET;ngrdvd81e29c816j;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 SPORTBET;ngrfnc92d22f839q;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;2;0;0,0
 SPORTBET;nkvlyi73l14z148j;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;2;0;0,0
 SPORTBET;nnllrt95t01d442g;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
-SPORTBET;nnrgnn86r25i754l;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;5;0;0,0
+SPORTBET;nnrgnn86r25i754l;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;7;0;0,0
 SPORTBET;nnzcmn99c28d643s;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 SPORTBET;nplbgi79r11c129t;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;3;0;0,0
 SPORTBET;nplcmn94r17h860a;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
@@ -5994,6 +6000,7 @@ SPORTBET;pscgtn83h19f257w;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;2;0;0,0
 SPORTBET;pscmtn87a12l191o;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;3;0;0,0
 SPORTBET;pscrkm96r18z506j;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;3;0;0,0
 SPORTBET;psidvd96p16b354u;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;2;0;0,0
+SPORTBET;psnmrc06c07f839k;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 SPORTBET;psqlsn04a25e472f;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 SPORTBET;psqpla90b18i726z;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 SPORTBET;ptapla69t07e506z;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
@@ -6269,7 +6276,7 @@ STANLEYBET;crcddm91s14g273o;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;2;0;0,0
 STANLEYBET;crcmra85s26l182u;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 STANLEYBET;crdgnn72p14m100j;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 STANLEYBET;crlfba96p03f839m;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;4;0;0,0
-STANLEYBET;crllgu60b10a089p;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;2;0;0,0
+STANLEYBET;crllgu60b10a089p;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 STANLEYBET;crnfdn66m25i726h;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 STANLEYBET;crrfba01c23g273y;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 STANLEYBET;crrlgo68r68l259m;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
@@ -6325,12 +6332,11 @@ STANLEYBET;fntmsm65m10g009o;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 STANLEYBET;frdsnn63d41f205k;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 STANLEYBET;frilrd97d01f839y;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 STANLEYBET;frlgrl03b11c351a;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
-STANLEYBET;frnfrc69t05c773t;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 STANLEYBET;frrmhl73p30l259r;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 STANLEYBET;frrndr99e17h860j;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 STANLEYBET;frsntn64a20g604f;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 STANLEYBET;frtrcr02d19h501f;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
-STANLEYBET;frvsmn90d03d612s;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;4;0;0,0
+STANLEYBET;frvsmn90d03d612s;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;6;0;0,0
 STANLEYBET;fsccmn86e06b963x;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;2;0;0,0
 STANLEYBET;fsnsmn95e04h501i;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 STANLEYBET;fzzgpp72c29c351q;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
@@ -6862,6 +6868,7 @@ STARCASINO;dlcfnc95a19d653z;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 STARCASINO;dlcfrc91t17d390i;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;2;0;0,0
 STARCASINO;dlcndr81s04g273w;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 STARCASINO;dlemnl87b15g975b;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
+STARCASINO;dlfrrt65p11g687p;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 STARCASINO;dlgcst06c09i452w;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 STARCASINO;dlglsn98a10g752e;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 STARCASINO;dlgmnl98a10l682r;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
@@ -7171,6 +7178,7 @@ STARCASINO;lstndr91a05f376n;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 STARCASINO;lstvcn87d16a662u;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 STARCASINO;lsumrc88c06f839z;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;2;0;0,0
 STARCASINO;ltflnz04a24a290u;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
+STARCASINO;lttfdn90d13g273t;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 STARCASINO;lttgpp65l25c351k;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;2;0;0,0
 STARCASINO;ltumnd81b24z100b;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 STARCASINO;lvrdrd97d18h501s;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;2;0;0,0
@@ -7245,7 +7253,6 @@ STARCASINO;mngmtt83h04f205g;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 STARCASINO;mngmtt95m08l219k;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;2;0;0,0
 STARCASINO;mnilgu96b26f839g;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;3;0;0,0
 STARCASINO;mnnlsn07d20f138c;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;5;0;0,0
-STARCASINO;mnnlsn92a14h501l;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;15;0;0,0
 STARCASINO;mnnpla92m07g273x;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 STARCASINO;mnpgrl05h03f839h;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 STARCASINO;mnrcld81b50a944e;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
@@ -7274,6 +7281,7 @@ STARCASINO;mrdmrk87l25d612l;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 STARCASINO;mrfndr93a12d969l;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 STARCASINO;mrlcrd04r28d960n;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 STARCASINO;mrldrd98e26a564g;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
+STARCASINO;mrllgu97h19e715f;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 STARCASINO;mrlmcs73e06c129n;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 STARCASINO;mrlmsa98h23d208p;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 STARCASINO;mrlmtt99m17f704z;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
@@ -7541,6 +7549,7 @@ STARCASINO;rlndns00r11a479x;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 STARCASINO;rlngpp87p07d643i;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 STARCASINO;rlolra75l69a944g;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 STARCASINO;rmedgi01s15h501z;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
+STARCASINO;rmlfnc82e17d969u;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 STARCASINO;rmncst93e69b300m;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 STARCASINO;rmnfnc77l03f258g;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 STARCASINO;rmngln73b25g535d;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
@@ -7757,6 +7766,7 @@ STARCASINO;vdandr94s16d843h;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 STARCASINO;vglrcn84s04i725j;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 STARCASINO;vgncrs97h28g482c;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;2;0;0,0
 STARCASINO;vgnlsn02m27d612g;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
+STARCASINO;vgnmhl93s04f839n;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 STARCASINO;vlilcn96h10f839h;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;7;0;0,0
 STARCASINO;vlldpl97h24i628m;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 STARCASINO;vllgcr71p30f205x;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
@@ -7929,6 +7939,7 @@ WILLIAMHILL;brbmtf68b26i622o;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 WILLIAMHILL;brbndr72r31e243a;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 WILLIAMHILL;brbptr53r24l781e;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 WILLIAMHILL;brcmsm71a09a944c;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
+WILLIAMHILL;brdmsm70h05g022r;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 WILLIAMHILL;brfgnn73d02c118t;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 WILLIAMHILL;brglne70r62g388n;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 WILLIAMHILL;brgvni93r19d009e;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
@@ -8003,8 +8014,8 @@ WILLIAMHILL;crbntn87e21f839r;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;3;0;0,0
 WILLIAMHILL;crbvcn77m11f537m;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 WILLIAMHILL;crcmln74c27h501r;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 WILLIAMHILL;crddrn87h02h224u;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;2;0;0,0
-WILLIAMHILL;crffnc85s01h501o;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;5;0;0,0
-WILLIAMHILL;crllsn01b04d643y;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;3;0;0,0
+WILLIAMHILL;crffnc85s01h501o;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;7;0;0,0
+WILLIAMHILL;crllsn01b04d643y;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;4;0;0,0
 WILLIAMHILL;crlmra90c22d643e;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;2;0;0,0
 WILLIAMHILL;crlndr00a14e715g;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;2;0;0,0
 WILLIAMHILL;crlndr99a28e506r;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;2;0;0,0
@@ -8145,6 +8156,7 @@ WILLIAMHILL;glsfnc98r14h501c;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 WILLIAMHILL;glsmsm63r15e690n;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 WILLIAMHILL;gltlcu00e03a459y;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;6;0;0,0
 WILLIAMHILL;gmbdnl02d19d918h;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
+WILLIAMHILL;gncfrz95e13h501e;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 WILLIAMHILL;gnncct88t53f839t;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 WILLIAMHILL;gnnfba75e19a883k;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 WILLIAMHILL;gnnflv68b10f205w;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;4;0;0,0
@@ -8204,6 +8216,7 @@ WILLIAMHILL;lvzbmn67h30f839p;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 WILLIAMHILL;mccmtt84r20g274b;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 WILLIAMHILL;mccvcn69p01g273m;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 WILLIAMHILL;mclmcl82h02f205o;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
+WILLIAMHILL;mcrrcr78d13d976x;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 WILLIAMHILL;mgnlsn00p10f205f;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 WILLIAMHILL;mgnmrk91h09b300n;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 WILLIAMHILL;mgnmtt05p03l113u;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;3;0;0,0
@@ -8271,6 +8284,7 @@ WILLIAMHILL;nstrrt69e07c665a;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;3;0;0,0
 WILLIAMHILL;ntlndr77t05d969a;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;2;0;0,0
 WILLIAMHILL;ntnnrn95t08i862i;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 WILLIAMHILL;nvrngl81t18b157j;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
+WILLIAMHILL;pcalcu78l07c344g;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 WILLIAMHILL;pccndr00p11h501u;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 WILLIAMHILL;pclsvn93h09g337p;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 WILLIAMHILL;pcrrfl84a15d390i;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0

@@ -1,5 +1,6 @@
 ﻿concessionario;cf;num_occulte_4;num_occulte_5;num_occulte_6;indice_occulte;indice_occulte_100;classe_occulte
 360BET;brrsvt97b15m289e;2;0;0;2;20;Bassa
+360BET;dnincl94d09a390i;2;2;0;6;60;Media
 360BET;mlarfl88p14i234g;2;2;2;12;100;Molto Alta
 360BET;mscndr96p16d086v;2;2;2;12;100;Molto Alta
 360BET;pscmln87l12h501h;2;0;0;2;20;Bassa
@@ -15,7 +16,7 @@ ADMIRAL;grfcrl90a10z602f;6;6;4;30;100;Molto Alta
 ADMIRAL;grflrt85h24d122p;2;0;0;2;20;Bassa
 ADMIRAL;lnccld58m24e463d;8;8;6;42;100;Molto Alta
 ADMIRAL;mrtrrg77d12c351b;2;0;0;2;20;Bassa
-ADMIRAL;n/a;11490;9062;6944;50446;100;Molto Alta
+ADMIRAL;n/a;11492;9062;6944;50448;100;Molto Alta
 ADMIRAL;pssfnc68s11h501m;2;2;2;12;100;Molto Alta
 ADMIRAL;rexsmn85c05a271k;2;2;2;12;100;Molto Alta
 BBET;bccgln74p11g273c;2;2;2;12;100;Molto Alta
@@ -87,7 +88,6 @@ DOMUSBET;cltnnn74t20l219w;2;2;2;12;100;Molto Alta
 DOMUSBET;clzsfn79a14f205n;2;0;0;2;20;Bassa
 DOMUSBET;cmplwg74t08b157g;2;0;0;2;20;Bassa
 DOMUSBET;cndmcl00r29g393k;2;2;2;12;100;Molto Alta
-DOMUSBET;cngmtv02m25l219y;2;0;0;2;20;Bassa
 DOMUSBET;cnlntn62e06i452a;2;2;2;12;100;Molto Alta
 DOMUSBET;cntcld73h21c129b;2;2;2;12;100;Molto Alta
 DOMUSBET;cntfrc87h18i403e;2;2;2;12;100;Molto Alta
@@ -335,7 +335,7 @@ SPORTBET;frndnl91c25h501q;2;2;0;6;60;Media
 SPORTBET;gfflnz89a05c351p;2;0;0;2;20;Bassa
 SPORTBET;ghlbrc04l46h501h;2;0;0;2;20;Bassa
 SPORTBET;gnnlrn73d57l500y;2;2;0;6;60;Media
-SPORTBET;lbtsvr85p16f112o;58;58;58;348;100;Molto Alta
+SPORTBET;lbtsvr85p16f112o;74;74;72;438;100;Molto Alta
 SPORTBET;lncldm94t07i804o;2;2;2;12;100;Molto Alta
 SPORTBET;lndcsm82l24a717r;2;2;2;12;100;Molto Alta
 SPORTBET;mdefba82r02f205o;2;2;2;12;100;Molto Alta

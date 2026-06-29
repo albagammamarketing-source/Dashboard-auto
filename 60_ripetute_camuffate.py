@@ -266,6 +266,23 @@ def filtra_solo_eventi_focus(df: pd.DataFrame) -> pd.DataFrame:
     return df[df["scommessa"].isin(SCOMMESSE_FOCUS)].copy()
 
 
+def importo_ticket_euro(importi) -> float:
+    """
+    Restituisce l'importo reale del ticket in euro.
+
+    Nel dataset Ticket_General.importo_pagato è ripetuto su ogni riga evento
+    dopo la JOIN con Ticket_Detail. Per questo NON va sommato.
+    Si prende una sola occorrenza valida, usando il massimo per robustezza,
+    e si divide per 100 perché il valore DB è espresso in centesimi.
+    """
+    valori = pd.to_numeric(pd.Series(importi), errors="coerce").dropna()
+
+    if valori.empty:
+        return 0.0
+
+    return round(float(valori.max()) / 100, 2)
+
+
 def aggregate_by_id(df: pd.DataFrame) -> pd.DataFrame:
     return (
         df.groupby(["concessionario", "id_ticket"])
@@ -311,10 +328,10 @@ def genera_ripetute_identiche(tickets_agg: pd.DataFrame) -> pd.DataFrame:
     results = []
 
     for _, row in tickets_agg.iterrows():
-        total = sum(row["importo_pagato"])
+        importo_ticket = importo_ticket_euro(row["importo_pagato"])
         count = seq_counts.get(row["sequence"], 0)
 
-        if count >= OCCURRENCE_THRESHOLD and total > SUM_THRESHOLD:
+        if count >= OCCURRENCE_THRESHOLD and importo_ticket > SUM_THRESHOLD:
             results.append({
                 "concessionario": row["concessionario"],
                 "cf": row["cf"],
@@ -323,7 +340,7 @@ def genera_ripetute_identiche(tickets_agg: pd.DataFrame) -> pd.DataFrame:
                 "data_competenza": row["data_competenza"],
                 "sequence": row["sequence"],
                 "occurrence_count": count,
-                "importo_totale_ticket": total,
+                "importo_totale_ticket": importo_ticket,
             })
 
     return pd.DataFrame(results)
@@ -358,8 +375,8 @@ def genera_ripetute_occulte(
                 "data_competenza_2": ticket_2["data_competenza"],
                 "eventi_in_comune": len(eventi_comuni),
                 "tuple_comuni": " || ".join(sorted(eventi_comuni)),
-                "importo_ticket_1": sum(ticket_1["importo_pagato"]),
-                "importo_ticket_2": sum(ticket_2["importo_pagato"]),
+                "importo_ticket_1": importo_ticket_euro(ticket_1["importo_pagato"]),
+                "importo_ticket_2": importo_ticket_euro(ticket_2["importo_pagato"]),
             })
 
     return pd.DataFrame(results)
@@ -651,8 +668,8 @@ def genera_ticket_similari(
                 "extra_scommessa": extra_scommessa,
                 "extra_quota": extra_quota,
                 "quota_soglia": QUOTA_EXTRA_THRESHOLD,
-                "importo_ticket_1": sum(ticket_1["importo_pagato"]),
-                "importo_ticket_2": sum(ticket_2["importo_pagato"]),
+                "importo_ticket_1": importo_ticket_euro(ticket_1["importo_pagato"]),
+                "importo_ticket_2": importo_ticket_euro(ticket_2["importo_pagato"]),
             })
 
     return pd.DataFrame(results)
@@ -782,11 +799,11 @@ def genera_similarity_clustering_utente(
                 "id_ticket_1": ticket_1["id_ticket"],
                 "data_ora_vend_1": ticket_1["data_ora_vend"],
                 "data_competenza_1": ticket_1["data_competenza"],
-                "importo_ticket_1": sum(ticket_1["importo_pagato"]),
+                "importo_ticket_1": importo_ticket_euro(ticket_1["importo_pagato"]),
                 "id_ticket_2": ticket_2["id_ticket"],
                 "data_ora_vend_2": ticket_2["data_ora_vend"],
                 "data_competenza_2": ticket_2["data_competenza"],
-                "importo_ticket_2": sum(ticket_2["importo_pagato"]),
+                "importo_ticket_2": importo_ticket_euro(ticket_2["importo_pagato"]),
                 "eventi_ticket_1": len(set_1),
                 "eventi_ticket_2": len(set_2),
                 "eventi_comuni": len(eventi_comuni),

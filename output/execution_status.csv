@@ -1,2 +1,2 @@
 ﻿stato;numero_file_generati;file_generati
-report_generati;9;output/ripetute_tickets.csv, output/ripetute_occulte_4.csv, output/ripetute_occulte_5.csv, output/ripetute_occulte_6.csv, output/indice_occulte_utenti.csv, output/indice_occulte_nome_commerciale.csv, output/indice_quota_extra_utenti.csv, output/analisi_similarity_utenti.csv, output/indice_similarity_utenti.csv
+report_generati;10;output/ripetute_tickets.csv, output/ripetute_occulte_4.csv, output/ripetute_occulte_5.csv, output/ripetute_occulte_6.csv, output/indice_occulte_utenti.csv, output/indice_occulte_nome_commerciale.csv, output/ticket_similari.csv, output/indice_quota_extra_utenti.csv, output/analisi_similarity_utenti.csv, output/indice_similarity_utenti.csv

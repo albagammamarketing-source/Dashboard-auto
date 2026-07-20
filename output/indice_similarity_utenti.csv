@@ -1,5 +1,5 @@
 ﻿concessionario;cf;indice_similarity;peso_quota_medio;num_confronti;media_eventi_comuni;num_occulte_4;num_occulte_5;num_occulte_6;indice_occulte;indice_occulte_100;classe_occulte;tot_ticket_utente;num_ticket_quota_extra;perc_ticket_quota_extra
-ADMIRAL;n/a;91,66;104,68;2;6,0;142;68;36;386;100,0;Molto Alta;119;4;3,36
+ADMIRAL;n/a;91,66;104,68;2;6,0;142;68;36;386;100,0;Molto Alta;121;4;3,31
 DOMUSBET;zndfba91e07g337z;100,0;144,29;1;7,0;2;2;2;12;100,0;Molto Alta;2;0;0,0
 STANLEYBET;bnskvn99m24c351b;100,0;301,88;1;8,0;6;2;2;16;100,0;Molto Alta;5;0;0,0
 ADMIRAL;bllflc51d19h148v;95,0;266,12;4;4,0;482;234;126;1328;100,0;Molto Alta;58;0;0,0
@@ -67,11 +67,11 @@ DOMUSBET;tdnndr01r04l483y;100,0;150,0;1;2,0;0;0;0;0;0,0;Nessuna;3;0;0,0
 SPORTBET;gmbsvt96d15g273r;100,0;150,0;1;2,0;0;0;0;0;0,0;Nessuna;2;0;0,0
 SPORTBET;vvlrrt94c07l781g;100,0;135,0;1;2,0;0;0;0;0;0,0;Nessuna;5;0;0,0
 WILLIAMHILL;gglvcn73e18h769i;100,0;250,0;1;2,0;0;0;0;0;0,0;Nessuna;2;0;0,0
-WILLIAMHILL;mrslcu92r10e512j;90,0;189,0;2;3,0;0;0;0;0;0,0;Nessuna;13;0;0,0
+WILLIAMHILL;mrslcu92r10e512j;90,0;189,0;2;3,0;0;0;0;0;0,0;Nessuna;14;0;0,0
 STARCASINO;rncndr79a16c933j;85,71;167,0;1;6,0;0;0;0;0;0,0;Nessuna;2;0;0,0
 WILLIAMHILL;lsscst81r12d704a;81,82;114,44;1;9,0;0;0;0;0;0,0;Nessuna;4;0;0,0
 STARCASINO;mrnmrc75c08d458d;80,0;138,0;1;4,0;0;0;0;0;0,0;Nessuna;5;0;0,0
-360BET;bcnmrc63r29d815z;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;7;0;0,0
+360BET;bcnmrc63r29d815z;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;9;0;0,0
 360BET;blgfnc91b14g702j;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 360BET;mrnfnc68d12f061a;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;2;0;0,0
 360BET;rncndr79a16c933j;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
@@ -106,6 +106,7 @@ BBET;dsnrrt79c17c573l;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 BBET;dssblk97m10z343n;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 BBET;glzcrn68e55z133b;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 BBET;leifnc70a01a842w;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
+BBET;lrslss91t07a225r;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 BBET;mlagnn59d23l379x;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 BBET;mntcln82h57z129q;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 BBET;mrztzn68t01c126n;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
@@ -670,7 +671,7 @@ DOMUSBET;zztmtt00c15e977u;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;2;0;0,0
 MARATHON;cppcst72m19i138p;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 MARATHON;cppvtr60m13d600f;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 MARATHON;dbrlnz96r01e882n;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
-MARATHON;drbvcn99b03e472v;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
+MARATHON;drbvcn99b03e472v;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;2;0;0,0
 MARATHON;dsmfnc62c25f839z;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;5;0;0,0
 MARATHON;frrnnz78l07c927c;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;3;0;0,0
 MARATHON;grltms94a21a944x;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
@@ -680,6 +681,7 @@ MARATHON;nstsst05p10l845d;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 MARATHON;plivlr57p20f889y;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 MARATHON;plmlgu51t22f839f;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 MARATHON;prcnti81b26z129p;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
+MARATHON;ptasmn89m06c588t;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 MARATHON;pvcgnd84p24c349z;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 MARATHON;pvipla76c23e472u;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 MARATHON;rldlcu74p02a122u;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
@@ -694,15 +696,17 @@ SPORTBET;bttlsn01t05l219g;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;2;0;0,0
 SPORTBET;cccmnl77d10l117n;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 SPORTBET;chrlgu91h01a089f;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;2;0;0,0
 SPORTBET;cnclcu93p11b819z;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;2;0;0,0
+SPORTBET;csrncl04b20f839m;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 SPORTBET;ctnmnl04d01d976p;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;2;0;0,0
 SPORTBET;dgsmrc79l11a783g;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 SPORTBET;dlcrrt68e05f880p;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 SPORTBET;dlnnni99d12a515t;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 SPORTBET;dlpgtn89m27z505o;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
+SPORTBET;frrgfr67b21b157r;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 SPORTBET;fscgnn98r21b506n;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;2;0;0,0
 SPORTBET;gbbndr95m07a192y;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 SPORTBET;lccmnl86c20e715s;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
-SPORTBET;lghngl88a17d761i;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;2;0;0,0
+SPORTBET;lghngl88a17d761i;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 SPORTBET;lmrlsn90r25e882k;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 SPORTBET;lrcntn79h30f158m;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 SPORTBET;lrntms86c29i726j;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
@@ -845,6 +849,7 @@ STARCASINO;rchfpj91a11z602j;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;3;0;0,0
 STARCASINO;rncmnl88p27l551r;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 STARCASINO;rntntn88e11e704m;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 STARCASINO;rssdnl92l15l845e;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
+STARCASINO;rssmcl74a08d548q;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 STARCASINO;rtocmn90s26h501l;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;4;0;0,0
 STARCASINO;scsdnl73r11h501f;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 STARCASINO;smnmrc04a24c034u;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0

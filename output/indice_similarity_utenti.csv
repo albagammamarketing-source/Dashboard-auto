@@ -1,5 +1,5 @@
 ﻿concessionario;cf;indice_similarity;peso_quota_medio;num_confronti;media_eventi_comuni;num_occulte_4;num_occulte_5;num_occulte_6;indice_occulte;indice_occulte_100;classe_occulte;tot_ticket_utente;num_ticket_quota_extra;perc_ticket_quota_extra
-ADMIRAL;n/a;91,66;104,68;2;6,0;232;92;46;554;100,0;Molto Alta;137;4;2,92
+ADMIRAL;n/a;91,66;104,68;2;6,0;234;92;46;556;100,0;Molto Alta;138;4;2,9
 STARCASINO;cpncrn75l25b300j;100,0;173,75;6;8,0;12;12;12;72;100,0;Molto Alta;4;0;0,0
 DOMUSBET;zndfba91e07g337z;100,0;144,29;1;7,0;2;2;2;12;100,0;Molto Alta;2;0;0,0
 STANLEYBET;bnskvn99m24c351b;100,0;301,88;1;8,0;6;2;2;16;100,0;Molto Alta;5;0;0,0
@@ -252,6 +252,7 @@ DOMUSBET;crbdnc01c17h501o;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 DOMUSBET;crcflc86a29f839f;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 DOMUSBET;crcfnc00m24c573j;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 DOMUSBET;crdsmn04c01l483t;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;2;0;0,0
+DOMUSBET;crlfpp06d07f257i;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 DOMUSBET;crllrd00t16h501v;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;2;0;0,0
 DOMUSBET;crpmtt96m04i496j;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 DOMUSBET;crrrcr92t22e506p;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
@@ -390,6 +391,7 @@ DOMUSBET;gttfba98r13h224r;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;2;0;0,0
 DOMUSBET;gttmtt00r04c573k;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;2;0;0,0
 DOMUSBET;gttrcr07c18l781a;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 DOMUSBET;gvnjcp92b21a341r;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;2;0;0,0
+DOMUSBET;gzzgcm03s16h620n;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 DOMUSBET;hxhsno04r58f052g;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 DOMUSBET;hxhsvn01p29c745g;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 DOMUSBET;jmnlss93b19a944s;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
@@ -452,6 +454,7 @@ DOMUSBET;mncmrc00c17a271q;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 DOMUSBET;mncncl95a13d458g;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 DOMUSBET;mncndr96c09e507e;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;2;0;0,0
 DOMUSBET;mncrld01p24l103q;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
+DOMUSBET;mndddc96p30f133v;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 DOMUSBET;mnnlcu99b05i403y;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 DOMUSBET;mnnlrd02l07a564v;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;2;0;0,0
 DOMUSBET;mnnlsn01a04i754i;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;2;0;0,0
@@ -622,6 +625,7 @@ DOMUSBET;sntrrt92t23h501t;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 DOMUSBET;sprmtt04d10h620p;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;2;0;0,0
 DOMUSBET;sprmtt94p21f902l;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 DOMUSBET;sptgrl03c18c351f;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
+DOMUSBET;spzlnz05s02e512w;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 DOMUSBET;srcngl98t16a638n;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 DOMUSBET;srflrd07d16f052h;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;2;0;0,0
 DOMUSBET;srggpp94p22c710u;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
@@ -750,6 +754,7 @@ SPORTBET;mlerzo78p28l049w;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;2;0;0,0
 SPORTBET;mncgnd78s24i804t;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 SPORTBET;mselsn81p03g273g;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 SPORTBET;mstmtt98m07h501x;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
+SPORTBET;mzzmsm66e23a271x;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 SPORTBET;pcnfnn71e24h579t;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 SPORTBET;pctfrc81d11c034z;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 SPORTBET;plmmda70m05f839r;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
@@ -757,6 +762,7 @@ SPORTBET;pltmrz62h07h195x;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;4;0;0,0
 SPORTBET;pnngri92m19h501l;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 SPORTBET;przwlm97m14b180r;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;2;0;0,0
 SPORTBET;rssndr71p02c573a;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
+SPORTBET;slzgrl04l28h703c;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 SPORTBET;spadnl96l25f205b;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 SPORTBET;tnamsm58m31h501w;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;2;0;0,0
 SPORTBET;trbdnl72d29d077m;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
@@ -848,6 +854,7 @@ STARCASINO;crnlnz81e27a246o;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 STARCASINO;crnvcn93a08a080f;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;2;0;0,0
 STARCASINO;cscmrc90c10a494b;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;2;0;0,0
 STARCASINO;cvtfrz85r31f839f;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
+STARCASINO;dcmmnl77e63l049x;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 STARCASINO;dcrplg82p30a515t;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 STARCASINO;dnllss94e21l219j;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 STARCASINO;dsgsmn83t30h264a;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
@@ -870,6 +877,7 @@ STARCASINO;lmdmnl70e55l319u;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 STARCASINO;lncvcn88b13c424o;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 STARCASINO;lntcst83l24c351l;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;4;0;0,0
 STARCASINO;lzzrrt95p11h769v;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
+STARCASINO;mclvcn05r01h769y;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 STARCASINO;mddndr02l04h224a;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 STARCASINO;mhltrd97m23z129g;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0
 STARCASINO;mldvio83a13f205o;0,0;0,0;0;0,0;0;0;0;0;0,0;Nessuna;1;0;0,0

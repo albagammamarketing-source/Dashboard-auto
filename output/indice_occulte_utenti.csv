@@ -1,16 +1,18 @@
 ﻿concessionario;cf;num_occulte_4;num_occulte_5;num_occulte_6;indice_occulte;indice_occulte_100;classe_occulte
-ADMIRAL;bllflc51d19h148v;938;482;220;2562;100;Molto Alta
+ADMIRAL;bllflc51d19h148v;824;412;202;2254;100;Molto Alta
 ADMIRAL;brtdvd94m03a944b;4;0;0;4;40;Media
 ADMIRAL;cppmrz80a26a390s;12;12;2;42;100;Molto Alta
 ADMIRAL;dnondr99p08g693b;2;0;0;2;20;Bassa
 ADMIRAL;fnilgu77p09f158m;2;0;0;2;20;Bassa
 ADMIRAL;frrnnz78l07c927c;20;4;2;34;100;Molto Alta
 ADMIRAL;grzpql82l15h579s;6;6;2;24;100;Molto Alta
+ADMIRAL;gstmra85b24h501s;2;0;0;2;20;Bassa
 ADMIRAL;mrtrrg77d12c351b;2;0;0;2;20;Bassa
 ADMIRAL;n/a;294;104;46;640;100;Molto Alta
 ADMIRAL;vlilss94b42f839h;2;0;0;2;20;Bassa
 BBET;crndnl90d26g273q;6;2;0;10;100;Molto Alta
 BBET;cttlrt56b26f448t;2;2;0;6;60;Media
+BBET;dbrlcs98c19d086d;2;0;0;2;20;Bassa
 BBET;dlflrt63e27e289x;2;0;0;2;20;Bassa
 BBET;grzpql82l15h579s;2;2;2;12;100;Molto Alta
 BBET;ppevcn61e01f104b;12;10;10;62;100;Molto Alta
@@ -42,6 +44,7 @@ DOMUSBET;drnlns70m15h501g;2;2;0;6;60;Media
 DOMUSBET;drspsb98r01i712c;2;0;0;2;20;Bassa
 DOMUSBET;dvnlnz99a02i628c;2;0;0;2;20;Bassa
 DOMUSBET;dvnrfl02h24a509y;2;2;0;6;60;Media
+DOMUSBET;fgllcu03e29g856k;2;0;0;2;20;Bassa
 DOMUSBET;frrlcu90m06f205v;2;2;0;6;60;Media
 DOMUSBET;grcmtt07b13a225o;2;2;0;6;60;Media
 DOMUSBET;grlcrs99m31h224i;2;2;0;6;60;Media
@@ -51,7 +54,7 @@ DOMUSBET;lptlcu95r25g596f;2;2;0;6;60;Media
 DOMUSBET;lpzmtt95r27l195r;2;2;0;6;60;Media
 DOMUSBET;lrsdnl00d17h355v;2;0;0;2;20;Bassa
 DOMUSBET;mchdnl79l18c745b;2;2;0;6;60;Media
-DOMUSBET;mlesml07s20b180o;6;4;0;14;100;Molto Alta
+DOMUSBET;mlesml07s20b180o;2;2;0;6;60;Media
 DOMUSBET;mncsmn04r07h501f;2;2;0;6;60;Media
 DOMUSBET;mrnkta71l45h501i;2;2;0;6;60;Media
 DOMUSBET;mrslrd04l11f844m;2;0;0;2;20;Bassa
@@ -85,6 +88,7 @@ DOMUSBET;vsclsn96d11i577t;2;0;0;2;20;Bassa
 DOMUSBET;wnrlrd04s26e514w;2;2;2;12;100;Molto Alta
 DOMUSBET;wnrlsn04s26e514k;6;6;4;30;100;Molto Alta
 DOMUSBET;zndfba91e07g337z;2;2;2;12;100;Molto Alta
+MARATHON;crsgmn72b09l741n;2;2;0;6;60;Media
 SPORTBET;bcclsn63m20g478t;276;208;164;1184;100;Molto Alta
 SPORTBET;cvlmnt57t18i018i;6;6;6;36;100;Molto Alta
 SPORTBET;scrrcs97p10i805f;6;0;0;6;60;Media

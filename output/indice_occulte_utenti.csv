@@ -10,7 +10,6 @@ ADMIRAL;n/a;398;90;36;686;100;Molto Alta
 ADMIRAL;pntfba94s14e335f;12;6;0;24;100;Molto Alta
 ADMIRAL;vlilss94b42f839h;2;0;0;2;20;Bassa
 BBET;bllntn61s22f104a;10;2;2;20;100;Molto Alta
-BBET;bnfgcr64d14d086n;2;0;0;2;20;Bassa
 BBET;brtlnz53l10h199q;12;0;0;12;100;Molto Alta
 BBET;crndnl90d26g273q;6;2;0;10;100;Molto Alta
 BBET;cttlrt56b26f448t;16;10;4;48;100;Molto Alta
@@ -31,6 +30,7 @@ DOMUSBET;brtchr72a69e704o;2;2;0;6;60;Media
 DOMUSBET;bssmcn85h13g113t;2;2;0;6;60;Media
 DOMUSBET;bssmhl92c28c573s;2;2;0;6;60;Media
 DOMUSBET;bttmtt88r10l781v;2;2;0;6;60;Media
+DOMUSBET;bttnls01h27l378u;2;0;0;2;20;Bassa
 DOMUSBET;bvoflv84r67b963v;2;0;0;2;20;Bassa
 DOMUSBET;clasnp06l27e506c;2;0;0;2;20;Bassa
 DOMUSBET;clmcsr00p16l872x;2;0;0;2;20;Bassa
@@ -52,9 +52,11 @@ DOMUSBET;fnclcu85b62i754l;2;2;2;12;100;Molto Alta
 DOMUSBET;frrgln76a08d612y;2;0;0;2;20;Bassa
 DOMUSBET;fscdvd96l01b963o;2;0;0;2;20;Bassa
 DOMUSBET;fslntn87m11c665a;2;2;2;12;100;Molto Alta
+DOMUSBET;gcmmro99h25g795u;2;0;0;2;20;Bassa
 DOMUSBET;glbndr02m31f205g;6;0;0;6;60;Media
 DOMUSBET;glldnl05p21a089b;20;20;20;120;100;Molto Alta
 DOMUSBET;gnncrl96m08d643g;2;0;0;2;20;Bassa
+DOMUSBET;gnndnl92c16d862d;2;0;0;2;20;Bassa
 DOMUSBET;jmlhmz00b01z236g;12;12;8;60;100;Molto Alta
 DOMUSBET;lcrrcr97a10d611z;2;2;2;12;100;Molto Alta
 DOMUSBET;lntvcn04t03b114d;6;6;6;36;100;Molto Alta
@@ -79,6 +81,7 @@ DOMUSBET;pllgnr95c22h703a;2;2;0;6;60;Media
 DOMUSBET;pltmtt03l28g224u;4;2;0;8;80;Alta
 DOMUSBET;pncrfl95r06z601v;2;0;0;2;20;Bassa
 DOMUSBET;pnlvni72p02f839o;4;4;4;24;100;Molto Alta
+DOMUSBET;pntdns03h16d423z;2;0;0;2;20;Bassa
 DOMUSBET;pntvrm05h03f839t;2;0;0;2;20;Bassa
 DOMUSBET;ppekst97t16z100w;2;0;0;2;20;Bassa
 DOMUSBET;pzzlcy97a44i712i;2;2;2;12;100;Molto Alta
@@ -90,8 +93,10 @@ DOMUSBET;rsslrt68a24e506n;2;2;0;6;60;Media
 DOMUSBET;rtgjph05h15a662u;2;0;0;2;20;Bassa
 DOMUSBET;rvlfnc07c25d704n;2;2;0;6;60;Media
 DOMUSBET;rvsmtt86m15d198s;2;0;0;2;20;Bassa
+DOMUSBET;sccdnl05c25e372y;2;0;0;2;20;Bassa
 DOMUSBET;sfffnc78c22g288c;6;0;0;6;60;Media
 DOMUSBET;slzlnz05m10c291o;2;2;2;12;100;Molto Alta
+DOMUSBET;srgmnl87l25i441x;2;0;0;2;20;Bassa
 DOMUSBET;strrcr91a09b157p;2;2;0;6;60;Media
 DOMUSBET;stsdnt01s30a662z;2;0;0;2;20;Bassa
 DOMUSBET;toirni97s60g348t;4;2;0;8;80;Alta
@@ -114,7 +119,7 @@ SPORTBET;bcclsn63m20g478t;708;500;302;2614;100;Molto Alta
 SPORTBET;brblni65h54i785x;6;6;6;36;100;Molto Alta
 SPORTBET;brtlrd80e29l219m;14;14;14;84;100;Molto Alta
 SPORTBET;chesma97t03g843m;2;0;0;2;20;Bassa
-SPORTBET;clfnna51e47i785w;12;12;12;72;100;Molto Alta
+SPORTBET;clfnna51e47i785w;18;18;18;108;100;Molto Alta
 SPORTBET;cnnndr96d18c745j;2;2;0;6;60;Media
 SPORTBET;crcscc04l02c573r;2;0;0;2;20;Bassa
 SPORTBET;crdrfl76d20z133i;6;6;0;18;100;Molto Alta
@@ -122,6 +127,7 @@ SPORTBET;cvlmnt57t18i018i;6;6;6;36;100;Molto Alta
 SPORTBET;lsgfba64c15f205z;2;2;0;6;60;Media
 SPORTBET;rgllei88a30b745j;12;12;12;72;100;Molto Alta
 SPORTBET;rssgnn84m06b519n;2;0;0;2;20;Bassa
+SPORTBET;sningl97p20i158t;2;2;2;12;100;Molto Alta
 SPORTBET;strplg95c23a509i;30;8;0;46;100;Molto Alta
 SPORTBET;vncvnn02a46l736v;2;2;2;12;100;Molto Alta
 SPORTBET;zccntn99d30l328u;2;2;0;6;60;Media
@@ -184,7 +190,7 @@ WILLIAMHILL;grzpql82l15h579s;6;2;0;10;100;Molto Alta
 WILLIAMHILL;hntlho83d05z138t;2;2;2;12;100;Molto Alta
 WILLIAMHILL;lsscst81r12d704a;20;20;12;96;100;Molto Alta
 WILLIAMHILL;mrnlcu87b07a940e;2;2;0;6;60;Media
-WILLIAMHILL;mrslcu92r10e512j;160;4;2;174;100;Molto Alta
+WILLIAMHILL;mrslcu92r10e512j;186;4;2;200;100;Molto Alta
 WILLIAMHILL;mrtrrg77d12c351b;130;44;2;224;100;Molto Alta
 WILLIAMHILL;pnzmnl75p43d704r;20;20;14;102;100;Molto Alta
 WILLIAMHILL;prtcld81b07f205z;2;0;0;2;20;Bassa
